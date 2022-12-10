@@ -1,0 +1,623 @@
+{
+    "copyright": "Copyright (c) 2017, 2022, Oracle Corporation and/or its affiliates.",
+    "license": "Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl",
+    "wlst_type": "Partition${:s}",
+    "online_bean": "weblogic.management.configuration.PartitionMBean",
+    "version": "[12.2.1,14.1.1)",
+    "child_folders_type": "multiple",
+    "short_name": "Part",
+    "folders": {
+        "CoherencePartitionCacheConfig": {
+            "wlst_type": "CoherencePartitionCacheConfig${:s}",
+            "online_bean": "weblogic.management.configuration.CoherencePartitionCacheConfigMBean",
+            "child_folders_type": "multiple",
+            "version": "[12.2.1,)",
+            "folders": {
+                "CoherencePartitionCacheProperty": {
+                    "wlst_type": "CoherencePartitionCachePropert${y:ies}",
+                    "online_bean": "weblogic.management.configuration.CoherencePartitionCachePropertyMBean",
+                    "child_folders_type": "multiple",
+                    "folders": {},
+                    "attributes": {
+                        "Notes": [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes", "wlst_path": "WP001", "default_value": null,     "wlst_type": "string"} ],
+                        "Value": [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Value", "wlst_path": "WP001", "default_value": null,     "wlst_type": "string"} ]
+                    },
+                    "wlst_attributes_path": "WP001",
+                    "wlst_paths": {
+                        "WP001": "/Partition${:s}/%PARTITION%/CoherencePartitionCacheConfig${:s}/%PARTITIONCOHCACHE%/CoherencePartitionCachePropert${y:ies}/%PARTITIONCOHCACHE_PROPERTYNAME%"
+                    }
+                }
+            },
+            "attributes": {
+                "ApplicationName": [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "ApplicationName", "wlst_path": "WP001", "default_value": null,     "wlst_type": "string" } ],
+                "CacheName":       [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "CacheName",       "wlst_path": "WP001", "default_value": null,     "wlst_type": "string" } ],
+                "Notes":           [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes",           "wlst_path": "WP001", "default_value": null,     "wlst_type": "string" } ],
+                "Shared":          [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Shared",          "wlst_path": "WP001", "default_value": "false",  "wlst_type": "boolean"} ]
+            },
+            "wlst_attributes_path": "WP001",
+            "wlst_paths": {
+                "WP001": "/Partition${:s}/%PARTITION%/CoherencePartitionCacheConfig${:s}/%PARTITIONCOHCACHE%"
+            }
+        },
+        "ConfigurationProperty": {
+            "wlst_type": "ConfigurationPropert${y:ies}",
+            "online_bean": "weblogic.management.configuration.ConfigurationPropertyMBean",
+            "version": "[12.2.1,)",
+            "child_folders_type": "multiple",
+            "folders": {},
+            "attributes": {
+                "EncryptedValueEncrypted": [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "EncryptedValueEncrypted", "wlst_path": "WP001", "default_value": null,     "wlst_type": "password", "get_method": "GET", "access": "RO" } ],
+                "EncryptValueRequired":    [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "EncryptValueRequired",    "wlst_path": "WP001", "default_value": "false",  "wlst_type": "boolean"    } ],
+                "Notes":                   [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes",                   "wlst_path": "WP001", "default_value": null,     "wlst_type": "string"     } ],
+                "Value":                   [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Value",                   "wlst_path": "WP001", "default_value": null,     "wlst_type": "string"     } ]
+            },
+            "wlst_attributes_path": "WP001",
+            "wlst_paths": {
+                "WP001": "/Partition${:s}/%PARTITION%/ConfigurationPropert${y:ies}/%CONFIGPROP%"
+            }
+        },
+        "DataSourcePartition": {
+            "wlst_type": "DataSourcePartition",
+            "online_bean": "weblogic.management.configuration.DataSourcePartitionMBean",
+            "version": "[12.2.1,)",
+            "default_name_value": "${NO_NAME_0:%PARTITION%}",
+            "folders": {},
+            "attributes": {
+                "DefaultDatasource":       [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "DefaultDatasource",       "wlst_path": "WP001", "default_value": null,     "wlst_type": "string", "restart_required": "true"} ],
+                "Notes":                   [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes",                   "wlst_path": "WP001", "default_value": null,     "wlst_type": "string" } ]
+            },
+            "wlst_attributes_path": "WP001",
+            "wlst_paths": {
+                "WP001": "/Partition${:s}/%PARTITION%/DataSourcePartition/%DATASOURCEPARTITION%"
+            }
+        },
+        "ForeignJndiProviderOverride": {
+            "wlst_type": "Foreign${Jndi:JNDI}ProviderOverride${:s}",
+            "online_bean": "weblogic.management.configuration.ForeignJNDIProviderOverrideMBean",
+            "version": "[12.2.1,)",
+            "child_folders_type": "multiple",
+            "folders": {
+                "ForeignJNDILink": {
+                    "wlst_type": "ForeignJNDILink${:s}",
+                    "online_bean": "weblogic.management.configuration.ForeignJNDILinkMBean",
+                    "version": "[12.2.1,)",
+                    "child_folders_type": "multiple",
+                    "folders": {},
+                    "attributes": {
+                        "LocalJNDIName":           [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "LocalJNDIName",   "wlst_path": "WP001", "default_value": null,     "wlst_type": "string" } ],
+                        "Notes":                   [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes",           "wlst_path": "WP001", "default_value": null,     "wlst_type": "string" } ],
+                        "RemoteJNDIName":          [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "RemoteJNDIName",  "wlst_path": "WP001", "default_value": null,     "wlst_type": "string"} ]
+                    },
+                    "wlst_attributes_path": "WP001",
+                    "wlst_paths": {
+                        "WP001": "/Partition${:s}/%PARTITION%/Foreign${Jndi:JNDI}ProviderOverride${:s}/%FOREIGNJNDIOVERRIDE%/ForeignJNDILink${:s}/%FOREIGNJNDILINK%"
+                    }
+                }
+            },
+            "attributes": {
+                "InitialContextFactory":    [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "InitialContextFactory",  "wlst_path": "WP001", "default_value": null,     "wlst_type": "string"     } ],
+                "Notes":                    [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes",                  "wlst_path": "WP001", "default_value": null,     "wlst_type": "string"     } ],
+                "PasswordEncrypted":        [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "PasswordEncrypted",      "wlst_path": "WP001", "default_value": null,     "wlst_type": "password",    "get_method": "GET" } ],
+                "Properties":               [ {"version": "[10,)",     "wlst_mode": "both", "wlst_name": "Properties",             "wlst_path": "WP001", "default_value": null,     "wlst_type": "properties",  "preferred_model_type": "dict", "get_method": "GET" } ],
+                "ProviderUrl":              [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Provider${Url:URL}",     "wlst_path": "WP001", "default_value": null,     "wlst_type": "string"     } ],
+                "User":                     [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "User",                   "wlst_path": "WP001", "default_value": null,     "wlst_type": "credential" } ]
+            },
+            "wlst_attributes_path": "WP001",
+            "wlst_paths": {
+                "WP001": "/Partition${:s}/%PARTITION%/Foreign${Jndi:JNDI}ProviderOverride${:s}/%FOREIGNJNDIOVERRIDE%"
+            }
+        },
+        "JdbcSystemResourceOverride": {
+            "wlst_type": "${JdbcSystemResourceOverride:JDBCSystemResourceOverrides}",
+            "online_bean": "weblogic.management.configuration.JDBCSystemResourceOverrideMBean",
+            "version": "[12.2.1,)",
+            "child_folders_type": "multiple",
+            "folders": {
+                "JdbcPropertyOverride": {
+                    "wlst_type": "${JdbcPropertyOverride:JDBCPropertyOverrides}",
+                    "online_bean": "weblogic.management.configuration.JDBCPropertyOverrideMBean",
+                    "version": "[12.2.1.3,)",
+                    "child_folders_type": "multiple",
+                    "folders": {},
+                    "attributes": {
+                        "EncryptedValueEncrypted": [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "EncryptedValueEncrypted", "wlst_path": "WP001", "default_value": null,     "wlst_type": "password", "get_method": "GET" } ],
+                        "Notes":                   [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes",                   "wlst_path": "WP001", "default_value": null,     "wlst_type": "string" } ],
+                        "SysPropValue":            [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "SysPropValue",            "wlst_path": "WP001", "default_value": "",       "wlst_type": "string" } ],
+                        "Value":                   [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Value",                   "wlst_path": "WP001", "default_value": null,     "wlst_type": "string"} ]
+                    },
+                    "wlst_attributes_path": "WP001",
+                    "wlst_paths": {
+                        "WP001": "/Partition${:s}/%PARTITION%/${JdbcSystemResourceOverride:JDBCSystemResourceOverrides}/%JDBCOVERRIDE%/${JdbcPropertyOverride:JDBCPropertyOverrides}/%PROPOVERRIDE%"
+                    }
+                }
+            },
+            "attributes": {
+                "DataSourceName":          [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "DataSourceName",          "wlst_path": "WP001", "default_value": null, "derived_default": "${:true}",    "wlst_type": "string",    "get_method": "${LSA:GET}" } ],
+                "InitialCapacity":         [ {"version": "[12.2.1.1,)", "wlst_mode": "both", "wlst_name": "InitialCapacity",         "wlst_path": "WP001", "default_value": -1,       "wlst_type": "integer"    } ],
+                "MaxCapacity":             [ {"version": "[12.2.1.1,)", "wlst_mode": "both", "wlst_name": "MaxCapacity",             "wlst_path": "WP001", "default_value": -1,       "wlst_type": "integer"    } ],
+                "MinCapacity":             [ {"version": "[12.2.1.1,)", "wlst_mode": "both", "wlst_name": "MinCapacity",             "wlst_path": "WP001", "default_value": -1,       "wlst_type": "integer"    } ],
+                "Notes":                   [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes",                   "wlst_path": "WP001", "default_value": null,     "wlst_type": "string"     } ],
+                "PasswordEncrypted":       [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "PasswordEncrypted",       "wlst_path": "WP001", "default_value": null,     "wlst_type": "password",  "get_method": "GET" } ],
+                "Url":                     [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "${Url:URL}",              "wlst_path": "WP001", "default_value": null,     "wlst_type": "string"     } ],
+                "User":                    [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "User",                    "wlst_path": "WP001", "default_value": null,     "wlst_type": "credential" } ]
+            },
+            "wlst_attributes_path": "WP001",
+            "wlst_paths": {
+                "WP001": "/Partition${:s}/%PARTITION%/${JdbcSystemResourceOverride:JDBCSystemResourceOverrides}/%JDBCOVERRIDE%"
+            }
+        },
+        "JmsSystemResourceOverride": {
+            "wlst_type": "${Jms:JMS}SystemResourceOverride${:s}",
+            "online_bean": "weblogic.management.configuration.JMSSystemResourceOverrideMBean",
+            "version": "[12.2.1,)",
+            "child_folders_type": "multiple",
+            "folders": {
+                "ForeignServer": {
+                    "wlst_type": "ForeignServer${:s}",
+                    "online_bean": "weblogic.j2ee.descriptor.wl.ForeignServerBean",
+                    "version": "[12.2.1,)",
+                    "child_folders_type": "multiple",
+                    "folders": {
+                        "ForeignConnectionFactory": {
+                            "wlst_type": "ForeignConnectionFactor${y:ies}",
+                            "online_bean": "weblogic.j2ee.descriptor.wl.ForeignConnectionFactoryBean",
+                            "version": "[12.2.1,)",
+                            "child_folders_type": "multiple",
+                            "folders": {},
+                            "attributes": {
+                                "Notes":                   [ {"version": "[12.2.1,)",         "wlst_mode": "both", "wlst_name": "Notes",                   "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string"     } ],
+                                "PasswordEncrypted":       [ {"version": "[12.2.1,)",         "wlst_mode": "both", "wlst_name": "PasswordEncrypted",       "wlst_path": "WP001", "default_value": null,                    "wlst_type": "password",  "get_method": "GET" } ],
+                                "RemoteJNDIName":          [ {"version": "[12.2.1,12.2.1.4)", "wlst_mode": "both", "wlst_name": "RemoteJNDIName",          "wlst_path": "WP001", "default_value": "No-Override",           "wlst_type": "string"     } ,
+                                                             {"version": "[12.2.1.4,)",       "wlst_mode": "both", "wlst_name": "RemoteJNDIName",          "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string"     } ],
+                                "Username":                [ {"version": "[12.2.1,)",         "wlst_mode": "both", "wlst_name": "Username",                "wlst_path": "WP001", "default_value": "No-Override",           "wlst_type": "credential" } ]
+                            },
+                            "wlst_attributes_path": "WP001",
+                            "wlst_paths": {
+                                "WP001": "/Partition${:s}/%PARTITION%/${Jms:JMS}SystemResourceOverride${:s}/%JMSOVERRIDE%/ForeignServer${:s}/%FOREIGNSERVER%/ForeignConnectionFactor${y:ies}/%FOREIGNCONNECTIONFACTORY%"
+                            }
+                        },
+                        "ForeignDestination": {
+                            "wlst_type": "ForeignDestination${:s}",
+                            "online_bean": "weblogic.j2ee.descriptor.wl.ForeignDestinationBean",
+                            "version": "[12.2.1,)",
+                            "child_folders_type": "multiple",
+                            "folders": {},
+                            "attributes": {
+                                "Notes":                   [ {"version": "[12.2.1,)",         "wlst_mode": "both", "wlst_name": "Notes",                   "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string"  } ],
+                                "RemoteJNDIName":          [ {"version": "[12.2.1,12.2.1.4)", "wlst_mode": "both", "wlst_name": "RemoteJNDIName",          "wlst_path": "WP001", "default_value": "No-Override",           "wlst_type": "string"  } ,
+                                                             {"version": "[12.2.1.4,)",       "wlst_mode": "both", "wlst_name": "RemoteJNDIName",          "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string"  } ]
+                            },
+                            "wlst_attributes_path": "WP001",
+                            "wlst_paths": {
+                                "WP001": "/Partition${:s}/%PARTITION%/${Jms:JMS}SystemResourceOverride${:s}/%JMSOVERRIDE%/ForeignServer${:s}/%FOREIGNSERVER%/ForeignDestination${:s}/%FOREIGNDESTINATION%"
+                            }
+                        },
+                        "JndiProperty": {
+                            "wlst_type": "${Jndi:JNDI}Propert${y:ies}",
+                            "online_bean": "weblogic.j2ee.descriptor.wl.PropertyBean",
+                            "version": "[12.2.1,)",
+                            "child_folders_type": "multiple",
+                            "folders": {},
+                            "attributes": {
+                                "Notes":                   [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes",          "wlst_path": "WP001", "default_value": null,            "wlst_type": "string"  } ],
+                                "Value":                   [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Value",          "wlst_path": "WP001", "default_value": null,            "wlst_type": "string"  } ]
+                            },
+                            "wlst_attributes_path": "WP001",
+                            "wlst_paths": {
+                                "WP001": "/Partition${:s}/%PARTITION%/${Jms:JMS}SystemResourceOverride${:s}/%JMSOVERRIDE%/ForeignServer${:s}/%FOREIGNSERVER%/${Jndi:JNDI}Propert${y:ies}/%JNDIPROPERTY%"
+                            }
+                        }
+                    },
+                    "attributes": {
+                        "ConnectionURL":                      [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "ConnectionURL",                             "wlst_path": "WP001", "default_value": "No-Override",   "wlst_type": "string"  } ],
+                        "InitialContextFactory":              [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "InitialContextFactory",                     "wlst_path": "WP001", "default_value": "No-Override",   "wlst_type": "string"  } ],
+                        "JndiPropertiesCredentialEncrypted":  [
+                            {"version": "[12.2.1,12.2.1.1)", "wlst_mode": "both", "wlst_name": "${Jndi:JNDI}PropertiesCredentialEncrypted", "wlst_path": "WP001", "default_value": null,  "wlst_type": "password",  "get_method": "${LSA:GET}" },
+                            {"version": "[12.2.1.1,)",       "wlst_mode": "both", "wlst_name": "${Jndi:JNDI}PropertiesCredentialEncrypted", "wlst_path": "WP001", "default_value": null,  "wlst_type": "password",  "get_method": "GET"        }
+                        ],
+                        "Notes":                              [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes",                                     "wlst_path": "WP001", "default_value": null,            "wlst_type": "string"  } ]
+                    },
+                    "wlst_attributes_path": "WP001",
+                    "wlst_paths": {
+                        "WP001": "/Partition${:s}/%PARTITION%/${Jms:JMS}SystemResourceOverride${:s}/%JMSOVERRIDE%/ForeignServer${:s}/%FOREIGNSERVER%"
+                    }
+                }
+            },
+            "attributes": {
+                "Notes":                   [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes",                   "wlst_path": "WP001", "default_value": null,     "wlst_type": "string"  } ]
+            },
+            "wlst_attributes_path": "WP001",
+            "wlst_paths": {
+                "WP001": "/Partition${:s}/%PARTITION%/${Jms:JMS}SystemResourceOverride${:s}/%JMSOVERRIDE%"
+            }
+        },
+        "JtaPartition": {
+            "wlst_type": "${JtaPartition:JTAPartition}",
+            "online_bean": "weblogic.management.configuration.JTAPartitionMBean",
+            "version": "[12.2.1,)",
+            "default_name_value": "${NO_NAME_0:%PARTITION%}",
+            "folders": {},
+            "attributes": {
+                "TimeoutSeconds": [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "TimeoutSeconds", "wlst_path": "WP001", "default_value": "${0:30}",  "derived_default": "${:true}", "wlst_type": "integer"} ],
+                "Notes":          [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes",          "wlst_path": "WP001", "default_value": null,       "wlst_type": "string" } ]
+            },
+            "wlst_attributes_path": "WP001",
+            "wlst_paths": {
+                "WP001": "/Partition${:s}/%PARTITION%/${JtaPartition:JTAPartition}/%JTAPARTITION%"
+            }
+        },
+        "MailSessionOverride": {
+            "wlst_type": "MailSessionOverride${:s}",
+            "online_bean": "weblogic.management.configuration.MailSessionOverrideMBean",
+            "version": "[12.2.1,)",
+            "child_folders_type": "multiple",
+            "folders": {},
+            "attributes": {
+                "Notes":                    [ {"version": "[12.2.1,)",          "wlst_mode": "both",    "wlst_name": "Notes",                        "wlst_path": "WP001", "default_value": null,      "wlst_type": "string"           } ],
+                "Properties":               [ {"version": "[12.2.1,)",          "wlst_mode": "both",    "wlst_name": "Properties",                   "wlst_path": "WP001", "default_value": null,      "wlst_type": "properties",      "preferred_model_type": "dict", "wlst_read_type": "delimited_string[semicolon]", "get_method": "LSA" } ],
+                "SessionPasswordEncrypted": [
+                    {"version": "[12.2.1,12.2.1.1)",  "wlst_mode": "offline", "wlst_name": "SessionPasswordEncrypted",     "wlst_path": "WP001", "default_value": null,      "wlst_type": "password",        "get_method": "LSA" },
+                    {"version": "[12.2.1.3,)",        "wlst_mode": "offline", "wlst_name": "SessionPasswordEncrypted",     "wlst_path": "WP001", "default_value": null,      "wlst_type": "password",        "get_method": "GET" },
+                    {"version": "[12.2.1,12.2.1.1)",  "wlst_mode": "online",  "wlst_name": "SessionPassword",              "wlst_path": "WP001", "default_value": null,      "wlst_type": "password",        "get_method": "LSA" },
+                    {"version": "[12.2.1.1,)",        "wlst_mode": "online",  "wlst_name": "SessionPasswordEncrypted",     "wlst_path": "WP001", "default_value": null,      "wlst_type": "password",        "get_method": "GET" }
+                ],
+                "SessionUsername":          [ {"version": "[12.2.1,)",          "wlst_mode": "both",    "wlst_name": "SessionUsername",              "wlst_path": "WP001", "default_value": null,      "wlst_type": "credential"       } ]
+            },
+            "wlst_attributes_path": "WP001",
+            "wlst_paths": {
+                "WP001": "/Partition${:s}/%PARTITION%/MailSessionOverride${:s}/%MAILSESSIONOVERRIDE%"
+            }
+        },
+        "PartitionLog": {
+            "wlst_type": "PartitionLog",
+            "online_bean": "weblogic.management.configuration.PartitionLogMBean",
+            "version": "[12.2.1,)",
+            "default_name_value": "%PARTITION%",
+            "folders": {},
+            "attributes": {
+                "EnabledServerDebugAttribute":     [ {"version": "[12.2.1,)",     "wlst_mode": "both",    "wlst_name": "EnabledServerDebugAttribute${:s}", "wlst_path": "WP001", "default_value": "[]",      "wlst_type": "${list:jarray}",  "get_method": "${LSA:GET}", "wlst_read_type": "delimited_string", "preferred_model_type": "list" } ],
+                "Notes":                           [ {"version": "[12.2.1,)",     "wlst_mode": "both",    "wlst_name": "Notes",                            "wlst_path": "WP001", "default_value": null,      "wlst_type": "string"           } ],
+                "PlatformLoggerLevels":            [ {"version": "[12.2.1,)",     "wlst_mode": "both",    "wlst_name": "PlatformLoggerLevels",             "wlst_path": "WP001", "default_value": null,      "wlst_type": "properties",      "preferred_model_type": "dict", "get_method": "GET" } ]
+            },
+            "wlst_attributes_path": "WP001",
+            "wlst_paths": {
+                "WP001": "/Partition${:s}/%PARTITION%/PartitionLog/%PARTITIONLOG%"
+            }
+        },
+        "PartitionWorkManager": {
+            "wlst_type": "PartitionWorkManager",
+            "online_bean": "weblogic.management.configuration.PartitionWorkManagerMBean",
+            "version": "[12.2.1,)",
+            "default_name_value": "%PARTITION%",
+            "child_folders_type": "single",
+            "folders": {},
+            "attributes": {
+                "FairShare":                     [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "FairShare",                     "wlst_path": "WP001", "default_value": 50,       "wlst_type": "integer"} ],
+                "MaxThreadsConstraint":          [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "MaxThreadsConstraint",          "wlst_path": "WP001", "default_value": -1,       "wlst_type": "integer"} ],
+                "MaxThreadsConstraintQueueSize": [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "MaxThreadsConstraintQueueSize", "wlst_path": "WP001", "default_value": 8192,     "wlst_type": "integer"} ],
+                "MinThreadsConstraintCap":       [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "MinThreadsConstraintCap",       "wlst_path": "WP001", "default_value": 0,        "wlst_type": "integer"} ],
+                "Notes":                         [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes",                         "wlst_path": "WP001", "default_value": null,     "wlst_type": "string"} ],
+                "SharedCapacityPercent":         [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "SharedCapacityPercent",         "wlst_path": "WP001", "default_value": 100,      "wlst_type": "integer"} ]
+            },
+            "wlst_attributes_path": "WP001",
+            "wlst_paths": {
+                "WP001": "/Partition${:s}/%PARTITION%/PartitionWorkManager/%PARTITIONWORKMANAGER%"
+            }
+        },
+        "ResourceManager": {
+            "wlst_type": "ResourceManager",
+            "online_bean": "weblogic.management.configuration.ResourceManagerMBean",
+            "version": "[12.2.1,)",
+            "default_name_value": "%PARTITION%",
+            "child_folders_type": "single",
+            "folders": {
+                "CpuUtilization": {
+                    "wlst_type": "CpuUtilization",
+                    "online_bean": "weblogic.management.configuration.CpuUtilizationMBean",
+                    "version": "[12.2.1,)",
+                    "default_name_value": "${NO_NAME_0:CpuTimeResource}",
+                    "folders": {
+                        "FairShareConstraint": {
+                            "wlst_type": "FairShareConstraint",
+                            "online_bean": "weblogic.management.configuration.FairShareConstraintMBean",
+                            "version": "[12.2.1,)",
+                            "default_name_value": "${NO_NAME_0:CpuUtilizationFairShareConstraint}",
+                            "folders": { },
+                            "attributes": {
+                                "Notes": [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes", "wlst_path": "WP001", "default_value": null,    "wlst_type": "string" } ],
+                                "Value": [
+                                    {"version": "[12.2.1,12.2.1.3)", "wlst_mode": "both", "wlst_name": "Value", "wlst_path": "WP001", "default_value": "${0:50}", "wlst_type": "integer"},
+                                    {"version": "[12.2.1.3,)",       "wlst_mode": "both", "wlst_name": "Value", "wlst_path": "WP001", "default_value": 50,        "wlst_type": "integer"}
+                                ]
+                            },
+                            "wlst_attributes_path": "WP001",
+                            "wlst_paths": {
+                                "WP001": "/Partition${:s}/%PARTITION%/ResourceManager/%RESOURCEMANAGER%/CpuUtilization/%CPUUTILIZATION%/FairShareConstraint/%FAIRSHARECONSTRAINT%"
+                            }
+                        },
+                        "Trigger": {
+                            "wlst_type": "Trigger${:s}",
+                            "online_bean": "weblogic.management.configuration.TriggerMBean",
+                            "version": "[12.2.1,)",
+                            "child_folders_type": "multiple",
+                            "folders": { },
+                            "attributes": {
+                                "Action": [ {"version": "[12.2.1,12.2.1.3)",   "wlst_mode": "both", "wlst_name": "Action", "wlst_path": "WP001", "default_value": null,                       "wlst_type": "string"} ,
+                                    {"version": "[12.2.1.3,)",         "wlst_mode": "both", "wlst_name": "Action", "wlst_path": "WP001", "default_value": "notify",                   "wlst_type": "string"} ],
+                                "Notes":  [ {"version": "[12.2.1,)",           "wlst_mode": "both", "wlst_name": "Notes",  "wlst_path": "WP001", "default_value": null,                       "wlst_type": "string"} ],
+                                "Value":  [ {"version": "[12.2.1,12.2.1.3)",   "wlst_mode": "both", "wlst_name": "Value",  "wlst_path": "WP001", "default_value": 0,                          "wlst_type": "long"  } ,
+                                    {"version": "[12.2.1.3,)",         "wlst_mode": "both", "wlst_name": "Value",  "wlst_path": "WP001", "default_value": "${0:9223372036854775807}",  "wlst_type": "long"  } ]
+                            },
+                            "wlst_attributes_path": "WP001",
+                            "wlst_paths": {
+                                "WP001": "/Partition${:s}/%PARTITION%/ResourceManager/%RESOURCEMANAGER%/CpuUtilization/%CPUUTILIZATION%/Trigger${:s}/%TRIGGER%"
+                            }
+                        }
+                    },
+                    "attributes": {
+                        "Notes": [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes", "wlst_path": "WP001", "default_value": null,    "wlst_type": "string"} ]
+                    },
+                    "wlst_attributes_path": "WP001",
+                    "wlst_paths": {
+                        "WP001": "/Partition${:s}/%PARTITION%/ResourceManager/%RESOURCEMANAGER%/CpuUtilization/%CPUUTILIZATION%"
+                    }
+                },
+                "FileOpen": {
+                    "wlst_type": "FileOpen",
+                    "online_bean": "weblogic.management.configuration.FileOpenMBean",
+                    "version": "[12.2.1,)",
+                    "default_name_value": "${NO_NAME_0:FileOpenResource}",
+                    "folders": {
+                        "Trigger": {
+                            "wlst_type": "Trigger${:s}",
+                            "online_bean": "weblogic.management.configuration.TriggerMBean",
+                            "version": "[12.2.1,)",
+                            "child_folders_type": "multiple",
+                            "folders": { },
+                            "attributes": {
+                                "Action": [ {"version": "[12.2.1,12.2.1.3)",  "wlst_mode": "both", "wlst_name": "Action", "wlst_path": "WP001", "default_value": null,                        "wlst_type": "string"} ,
+                                    {"version": "[12.2.1.3,)",        "wlst_mode": "both", "wlst_name": "Action", "wlst_path": "WP001", "default_value": "notify",                    "wlst_type": "string"} ],
+                                "Notes":  [ {"version": "[12.2.1,)",          "wlst_mode": "both", "wlst_name": "Notes",  "wlst_path": "WP001", "default_value": null,                        "wlst_type": "string"} ],
+                                "Value":  [ {"version": "[12.2.1,12.2.1.3)",  "wlst_mode": "both", "wlst_name": "Value",  "wlst_path": "WP001", "default_value": 0,                           "wlst_type": "long"  } ,
+                                    {"version": "[12.2.1.3,)",        "wlst_mode": "both", "wlst_name": "Value",  "wlst_path": "WP001", "default_value": "${0:9223372036854775807}",  "wlst_type": "long"  } ]
+                            },
+                            "wlst_attributes_path": "WP001",
+                            "wlst_paths": {
+                                "WP001": "/Partition${:s}/%PARTITION%/ResourceManager/%RESOURCEMANAGER%/FileOpen/%FILEOPEN%/Trigger${:s}/%TRIGGER%"
+                            }
+                        }
+                    },
+                    "attributes": {
+                        "Notes": [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes", "wlst_path": "WP001", "default_value": null,    "wlst_type": "string"} ]
+                    },
+                    "wlst_attributes_path": "WP001",
+                    "wlst_paths": {
+                        "WP001": "/Partition${:s}/%PARTITION%/ResourceManager/%RESOURCEMANAGER%/FileOpen/%FILEOPEN%"
+                    }
+                },
+                "HeapRetained": {
+                    "wlst_type": "HeapRetained",
+                    "online_bean": "weblogic.management.configuration.HeapRetainedMBean",
+                    "version": "[12.2.1,)",
+                    "default_name_value": "${NO_NAME_0:HeapRetainedResource}",
+                    "folders": {
+                        "FairShareConstraint": {
+                            "wlst_type": "FairShareConstraint",
+                            "online_bean": "weblogic.management.configuration.FairShareConstraintMBean",
+                            "version": "[12.2.1,)",
+                            "default_name_value": "${NO_NAME_0:HeapRetainedFairShareConstraint}",
+                            "folders": { },
+                            "attributes": {
+                                "Notes": [ {"version": "[12.2.1,)",           "wlst_mode": "both", "wlst_name": "Notes",  "wlst_path": "WP001", "default_value": null,    "wlst_type": "string" } ],
+                                "Value": [ {"version": "[12.2.1,12.2.1.3)",   "wlst_mode": "both", "wlst_name": "Value",  "wlst_path": "WP001", "default_value": 0,       "wlst_type": "integer"} ,
+                                    {"version": "[12.2.1.3,)",         "wlst_mode": "both", "wlst_name": "Value",  "wlst_path": "WP001", "default_value": 50,      "wlst_type": "integer"} ]
+                            },
+                            "wlst_attributes_path": "WP001",
+                            "wlst_paths": {
+                                "WP001": "/Partition${:s}/%PARTITION%/ResourceManager/%RESOURCEMANAGER%/HeapRetained/%HEAPRETAINED%/FairShareConstraint/%FAIRSHARECONSTRAINT%"
+                            }
+                        },
+                        "Trigger": {
+                            "wlst_type": "Trigger${:s}",
+                            "online_bean": "weblogic.management.configuration.TriggerMBean",
+                            "version": "[12.2.1,)",
+                            "child_folders_type": "multiple",
+                            "folders": { },
+                            "attributes": {
+                                "Action": [ {"version": "[12.2.1,12.2.1.3)",   "wlst_mode": "both", "wlst_name": "Action", "wlst_path": "WP001", "default_value": null,                        "wlst_type": "string"} ,
+                                    {"version": "[12.2.1.3,)",         "wlst_mode": "both", "wlst_name": "Action", "wlst_path": "WP001", "default_value": "notify",                    "wlst_type": "string"} ],
+                                "Notes":  [ {"version": "[12.2.1,)",           "wlst_mode": "both", "wlst_name": "Notes",  "wlst_path": "WP001", "default_value": null,                        "wlst_type": "string"} ],
+                                "Value":  [ {"version": "[12.2.1,12.2.1.3)",   "wlst_mode": "both", "wlst_name": "Value",  "wlst_path": "WP001", "default_value": 0,                           "wlst_type": "long"  } ,
+                                    {"version": "[12.2.1.3,)",         "wlst_mode": "both", "wlst_name": "Value",  "wlst_path": "WP001", "default_value": "${0:9223372036854775807}",  "wlst_type": "long"  } ]
+                            },
+                            "wlst_attributes_path": "WP001",
+                            "wlst_paths": {
+                                "WP001": "/Partition${:s}/%PARTITION%/ResourceManager/%RESOURCEMANAGER%/HeapRetained/%HEAPRETAINED%/Trigger${:s}/%TRIGGER%"
+                            }
+                        }
+                    },
+                    "attributes": {
+                        "Notes": [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes", "wlst_path": "WP001", "default_value": null,    "wlst_type": "string"} ]
+                    },
+                    "wlst_attributes_path": "WP001",
+                    "wlst_paths": {
+                        "WP001": "/Partition${:s}/%PARTITION%/ResourceManager/%RESOURCEMANAGER%/HeapRetained/%HEAPRETAINED%"
+                    }
+                },
+                "RestartLoopProtection": {
+                    "wlst_type": "RestartLoopProtection",
+                    "online_bean": "weblogic.management.configuration.RestartLoopProtectionMBean",
+                    "version": "[12.2.1.1,)",
+                    "default_name_value": "${NO_NAME_0:%RESOURCEMANAGER%}",
+                    "folders": { },
+                    "attributes": {
+                        "MaxRestartAllowed":            [ {"version": "[12.2.1.1,)", "wlst_mode": "both", "wlst_name": "MaxRestartAllowed",            "wlst_path": "WP001", "default_value": 0,       "wlst_type": "long"    } ],
+                        "MaxRestartAllowedInterval":    [ {"version": "[12.2.1.1,)", "wlst_mode": "both", "wlst_name": "MaxRestartAllowedInterval",    "wlst_path": "WP001", "default_value": 0,       "wlst_type": "long"    } ],
+                        "Notes":                        [ {"version": "[12.2.1.1,)", "wlst_mode": "both", "wlst_name": "Notes",                        "wlst_path": "WP001", "default_value": null,    "wlst_type": "string"  } ],
+                        "RestartDelay":                 [ {"version": "[12.2.1.1,)", "wlst_mode": "both", "wlst_name": "RestartDelay",                 "wlst_path": "WP001", "default_value": 0,       "wlst_type": "long"    } ],
+                        "RestartLoopProtectionEnabled": [ {"version": "[12.2.1.1,)", "wlst_mode": "both", "wlst_name": "RestartLoopProtectionEnabled", "wlst_path": "WP001", "default_value": "false", "wlst_type": "boolean" } ]
+                    },
+                    "wlst_attributes_path": "WP001",
+                    "wlst_paths": {
+                        "WP001": "/Partition${:s}/%PARTITION%/ResourceManager/%RESOURCEMANAGER%/RestartLoopProtection/%RESTARTLOOPPROTECTION%"
+                    }
+                }
+            },
+            "attributes": {
+                "Notes": [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes", "wlst_path": "WP001", "default_value": null,    "wlst_type": "string"} ]
+            },
+            "wlst_attributes_path": "WP001",
+            "wlst_paths": {
+                "WP001": "/Partition${:s}/%PARTITION%/ResourceManager/%RESOURCEMANAGER%"
+            }
+        },
+        "SystemFileSystem": {
+            "wlst_type": "SystemFileSystem",
+            "online_bean": "weblogic.management.configuration.PartitionFileSystemMBean",
+            "version": "[12.2.1,)",
+            "default_name_value": "${NO_NAME_0:%PARTITION%}",
+            "folder_params": [
+                {"version":  "[12.2.1,12.2.1.1)", "wlst_mode": "online" },
+                {"version":  "[12.2.1.1,)"}
+            ],
+            "folders": {},
+            "attributes": {
+                "CreateOnDemand":  [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "CreateOnDemand", "wlst_path": "WP001", "default_value": "true",  "wlst_type": "boolean"} ],
+                "Notes":           [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes",          "wlst_path": "WP001", "default_value": null,    "wlst_type": "string" } ],
+                "Preserved":       [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Preserved",      "wlst_path": "WP001", "default_value": "true",  "wlst_type": "boolean"} ],
+                "Root":            [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Root",           "wlst_path": "WP001", "default_value": null,   "derived_default": "${:true}", "wlst_type": "string" } ]
+            },
+            "wlst_attributes_path": "WP001",
+            "wlst_paths": {
+                "WP001": "/Partition${:s}/%PARTITION%/SystemFileSystem/%SYSTEMFILESYSTEM%"
+            }
+        },
+        "UserFileSystem": {
+            "wlst_type": "UserFileSystem",
+            "online_bean": "weblogic.management.configuration.PartitionUserFileSystemMBean",
+            "version": "[12.2.1.1,)",
+            "default_name_value": "${NO_NAME_0:%PARTITION%}",
+            "folders": {},
+            "attributes": {
+                "CreateOnDemand": [ {"version": "[12.2.1.1,)", "wlst_mode": "both", "wlst_name": "CreateOnDemand", "wlst_path": "WP001", "default_value": "true",   "wlst_type": "boolean"} ],
+                "Notes":          [ {"version": "[12.2.1.1,)", "wlst_mode": "both", "wlst_name": "Notes",          "wlst_path": "WP001", "default_value": null,     "wlst_type": "string" } ],
+                "Preserved":      [ {"version": "[12.2.1.1,)", "wlst_mode": "both", "wlst_name": "Preserved",      "wlst_path": "WP001", "default_value": "true",   "wlst_type": "boolean"} ],
+                "Root":           [ {"version": "[12.2.1.1,)", "wlst_mode": "both", "wlst_name": "Root",           "wlst_path": "WP001", "default_value": null,     "derived_default": "${:true}", "wlst_type": "string" } ]
+            },
+            "wlst_attributes_path": "WP001",
+            "wlst_paths": {
+                "WP001": "/Partition${:s}/%PARTITION%/UserFileSystem/%USERFILESYSTEM%"
+            }
+        },
+        "WebService": {
+            "wlst_type": "WebService",
+            "online_bean": "weblogic.management.configuration.WebServiceMBean",
+            "version": "[12.2.1,)",
+            "default_name_value": "${NO_NAME_0:%PARTITION%}",
+            "folders": {
+                "WebServiceBuffering": {
+                    "wlst_type": "WebServiceBuffering",
+                    "online_bean": "weblogic.management.configuration.WebServiceBufferingMBean",
+                    "version": "[12.2.1,)",
+                    "default_name_value": "${NO_NAME_0:%PARTITION%}",
+                    "folders": {
+                        "WebServiceRequestBufferingQueue": {
+                            "wlst_type": "WebServiceRequestBufferingQueue",
+                            "online_bean": "weblogic.management.configuration.WebServiceRequestBufferingQueueMBean",
+                            "version": "[12.2.1,)",
+                            "default_name_value": "${NO_NAME_0:%PARTITION%}",
+                            "folders": {},
+                            "attributes": {
+                                "ConnectionFactoryJndiName":  [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "ConnectionFactoryJndiName",    "wlst_path": "WP001", "default_value": null,       "wlst_type": "string"  } ],
+                                "Enabled":                    [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Enabled",                      "wlst_path": "WP001", "default_value": "false",    "wlst_type": "boolean" } ],
+                                "Notes":                      [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes",                        "wlst_path": "WP001", "default_value": null,       "wlst_type": "string"  } ],
+                                "TransactionEnabled":         [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "TransactionEnabled",           "wlst_path": "WP001", "default_value": "false",    "wlst_type": "boolean" } ]
+                            },
+                            "wlst_attributes_path": "WP001",
+                            "wlst_paths": {
+                                "WP001": "/Partition${:s}/%PARTITION%/WebService/%WEBSERVICE%/WebServiceBuffering/%WEBSERVICEBUFFERING%/WebServiceRequestBufferingQueue/%WEBSERVICEREQUESTBUFFERINGQUEUE%"
+                            }
+                        },
+                        "WebServiceResponseBufferingQueue": {
+                            "wlst_type": "WebServiceResponseBufferingQueue",
+                            "online_bean": "weblogic.management.configuration.WebServiceResponseBufferingQueueMBean",
+                            "version": "[12.2.1,)",
+                            "default_name_value": "${NO_NAME_0:%PARTITION%}",
+                            "folders": {},
+                            "attributes": {
+                                "ConnectionFactoryJndiName":  [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "ConnectionFactoryJndiName",    "wlst_path": "WP001", "default_value": null,       "wlst_type": "string"  } ],
+                                "Enabled":                    [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Enabled",                      "wlst_path": "WP001", "default_value": "false",    "wlst_type": "boolean" } ],
+                                "Notes":                      [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes",                        "wlst_path": "WP001", "default_value": null,       "wlst_type": "string"  } ],
+                                "TransactionEnabled":         [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "TransactionEnabled",           "wlst_path": "WP001", "default_value": "false",    "wlst_type": "boolean" } ]
+                            },
+                            "wlst_attributes_path": "WP001",
+                            "wlst_paths": {
+                                "WP001": "/Partition${:s}/%PARTITION%/WebService/%WEBSERVICE%/WebServiceBuffering/%WEBSERVICEBUFFERING%/WebServiceResponseBufferingQueue/%WEBSERVICERESPONSEBUFFERINGQUEUE%"
+                            }
+                        }
+                    },
+                    "attributes": {
+                        "Notes":                  [ {"version": "[12.2.1,)",        "wlst_mode": "both",     "wlst_name": "Notes",            "wlst_path": "WP001", "default_value": null,       "wlst_type": "string"  } ],
+                        "RetryCount":             [ {"version": "[12.2.1,)",        "wlst_mode": "both",     "wlst_name": "RetryCount",       "wlst_path": "WP001", "default_value": 3,          "wlst_type": "integer", "get_method": "GET" } ],
+                        "RetryDelay":             [ {"version": "[12.2.1,)",        "wlst_mode": "both",     "wlst_name": "RetryDelay",       "wlst_path": "WP001", "default_value": "P0DT30S",  "wlst_type": "string"  } ]
+                    },
+                    "wlst_attributes_path": "WP001",
+                    "wlst_paths": {
+                        "WP001": "/Partition${:s}/%PARTITION%/WebService/%WEBSERVICE%/WebServiceBuffering/%WEBSERVICEBUFFERING%"
+                    }
+                }
+            },
+            "attributes": {
+                "CallbackQueue":                       [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "CallbackQueue",                              "wlst_path": "WP001", "default_value": "weblogic.wsee.DefaultCallbackQueue",  "wlst_type": "string" } ],
+                "CallbackQueueMdbRunAsPrincipalName":  [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "CallbackQueueM${db:DB}RunAsPrincipalName",   "wlst_path": "WP001", "default_value": null,                                  "wlst_type": "string" } ],
+                "JmsConnectionFactory":                [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "JmsConnectionFactory",                       "wlst_path": "WP001", "default_value": "weblogic.jms.XAConnectionFactory",    "wlst_type": "string" } ],
+                "MessagingQueue":                      [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "MessagingQueue",                             "wlst_path": "WP001", "default_value": "weblogic.wsee.DefaultQueue",          "wlst_type": "string" } ],
+                "MessagingQueueMdbRunAsPrincipalName": [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "MessagingQueueM${db:DB}RunAsPrincipalName",  "wlst_path": "WP001", "default_value": null,                                  "wlst_type": "string" } ],
+                "Notes":                               [ {"version": "[12.2.1,)", "wlst_mode": "both", "wlst_name": "Notes",                                      "wlst_path": "WP001", "default_value": null,                                  "wlst_type": "string" } ]
+            },
+            "wlst_attributes_path": "WP001",
+            "wlst_paths": {
+                "WP001": "/Partition${:s}/%PARTITION%/WebService/%WEBSERVICE%"
+            }
+        }
+    },
+    "attributes": {
+        "AvailableTargets":                      [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "AvailableTargets",                        "wlst_path": "WP001", "default_value": null,              "wlst_type": "jarray",           "preferred_model_type": "delimited_string", "get_method": "${LSA:GET}", "wlst_read_type": "delimited_string", "set_method": "MBEAN.set_mt_target_mbeans", "set_mbean_type": "weblogic.management.configuration.TargetMBean" } ],
+        "BatchJobsDataSourceJndiName":           [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "BatchJobsDataSourceJndiName",             "wlst_path": "WP001", "default_value": null,              "wlst_type": "string"            } ],
+        "BatchJobsExecutorServiceName":          [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "BatchJobsExecutorServiceName",            "wlst_path": "WP001", "default_value": null,              "wlst_type": "string"            } ],
+        "DataSourceForJobScheduler":             [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "DataSourceForJobScheduler",               "wlst_path": "WP001", "default_value": null,              "wlst_type": "string",           "set_method": "${:MBEAN.set_data_source_mbean}", "set_mbean_type": "${:weblogic.management.configuration.JDBCSystemResourceMBean}" } ],
+        "DefaultTargets":                        [
+            {"version": "[12.2.1,12.2.1.1)", "wlst_mode": "offline", "wlst_name": "DefaultTargets",  "wlst_path": "WP001", "default_value": null, "wlst_type": "jarray",           "preferred_model_type": "delimited_string",  "get_method": "GET", "set_method": "MBEAN.set_mt_target_mbeans", "set_mbean_type": "weblogic.management.configuration.TargetMBean" },
+            {"version": "[12.2.1.1,)",       "wlst_mode": "offline", "wlst_name": "DefaultTargets",  "wlst_path": "WP001", "default_value": null, "wlst_type": "list",             "preferred_model_type": "delimited_string",  "get_method": "LSA", "wlst_read_type": "delimited_string" },
+            {"version": "[12.2.1,)",         "wlst_mode": "online",  "wlst_name": "DefaultTargets",  "wlst_path": "WP001", "default_value": "[]", "wlst_type": "jarray",           "preferred_model_type": "delimited_string",  "get_method": "GET", "set_method": "MBEAN.set_mt_target_mbeans", "set_mbean_type": "weblogic.management.configuration.TargetMBean" } ],
+        "EagerTrackingOfResourceMetricsEnabled": [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "EagerTrackingOfResourceMetricsEnabled",   "wlst_path": "WP001", "default_value": "false",           "wlst_type": "boolean"           } ],
+        "GracefulShutdownTimeout":               [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "GracefulShutdownTimeout",                 "wlst_path": "WP001", "default_value": 0,                 "wlst_type": "integer"           } ],
+        "IgnoreSessionsDuringShutdown":          [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "IgnoreSessionsDuringShutdown",            "wlst_path": "WP001", "default_value": "false",           "wlst_type": "boolean"           } ],
+        "JobSchedulerTableName":                 [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "JobSchedulerTableName",                   "wlst_path": "WP001", "default_value": "WEBLOGIC_TIMERS", "wlst_type": "string"            } ],
+        "MaxConcurrentLongRunningRequests":      [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "MaxConcurrentLongRunningRequests",        "wlst_path": "WP001", "default_value": 50,                "wlst_type": "integer"           } ],
+        "MaxConcurrentNewThreads":               [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "MaxConcurrentNewThreads",                 "wlst_path": "WP001", "default_value": 50,                "wlst_type": "integer"           } ],
+        "Notes":                                 [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "Notes",                                   "wlst_path": "WP001", "default_value": null,              "wlst_type": "string"            } ],
+        "ParallelDeployApplicationModules":      [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "ParallelDeployApplicationModules",        "wlst_path": "WP001", "default_value": "false",           "wlst_type": "boolean"           } ],
+        "ParallelDeployApplications":            [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "ParallelDeployApplications",              "wlst_path": "WP001", "default_value": "true",            "wlst_type": "boolean"           } ],
+        "PartitionId":                           [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "Partition${Id:ID}",                       "wlst_path": "WP001", "default_value": null,              "wlst_type": "string",           "access": "${:RO}"} ],
+        "PartitionLifeCycleTimeoutVal":          [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "PartitionLifeCycleTimeoutVal",            "wlst_path": "WP001", "default_value": 30,                "wlst_type": "integer"           } ],
+        "PartitionWorkManagerRef":               [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "PartitionWorkManagerRef",                 "wlst_path": "WP001", "default_value": null,              "wlst_type": "string",           "get_method": "LSA", "set_method": "MBEAN.set_partition_work_manager_mbean", "set_mbean_type": "weblogic.management.configuration.PartitionWorkManagerMBean" } ],
+        "PrimaryIdentityDomain":                 [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "PrimaryIdentityDomain",                   "wlst_path": "WP001", "default_value": null, "derived_default": "${:true}", "wlst_type": "string"            } ],
+        "RCMHistoricalDataBufferLimit":          [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "RCMHistoricalDataBufferLimit",            "wlst_path": "WP001", "default_value": 250,               "wlst_type": "integer"           } ],
+        "Realm":                                 [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "Realm",                                   "wlst_path": "WP001", "default_value": null,              "wlst_type": "string",           "get_method": "LSA", "set_method": "MBEAN.set_security_realm_mbean", "set_mbean_type": "weblogic.management.security.RealmMBean" } ],
+        "ResourceDeploymentPlan":                [ {"version": "[12.2.1,)",         "wlst_mode": "online",  "wlst_name": "ResourceDeploymentPlan",                  "wlst_path": "WP001", "default_value": null,              "wlst_type": "string",           "access": "RO"} ],
+        "ResourceDeploymentPlanExternalDescriptors": [ {"version": "[12.2.1,)",     "wlst_mode": "online",  "wlst_name": "ResourceDeploymentPlanExternalDescriptors", "wlst_path": "WP001", "default_value": null,            "wlst_type": "string",           "access": "RO"} ],
+        "ResourceDeploymentPlanPath":            [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "ResourceDeploymentPlanPath",              "wlst_path": "WP001", "default_value": null,              "wlst_type": "string",           "uses_path_tokens": "true" } ],
+        "ResourceManagerRef":                    [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "ResourceManagerRef",                      "wlst_path": "WP001", "default_value": null,              "wlst_type": "string",           "get_method": "LSA", "set_method": "MBEAN.set_resource_manager_mbean", "set_mbean_type": "weblogic.management.configuration.ResourceManagerMBean"} ],
+        "StartupTimeout":                        [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "StartupTimeout",                          "wlst_path": "WP001", "default_value": 0,                 "wlst_type": "integer"           } ],
+        "UploadDirectoryName":                   [ {"version": "[12.2.1,)",         "wlst_mode": "both",    "wlst_name": "UploadDirectoryName",                     "wlst_path": "WP001", "default_value": null,              "wlst_type": "string",            "uses_path_tokens": "true" } ]
+    },
+    "wlst_attributes_path": "WP001",
+    "wlst_paths": {
+        "WP001": "/Partition${:s}/%PARTITION%"
+    },
+    "contains": [
+        "ResourceGroup",
+        "SelfTuning"
+    ]
+}

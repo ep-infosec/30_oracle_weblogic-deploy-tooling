@@ -1,0 +1,128 @@
+def versions_to_verify = []
+def build_failed_email_body = []
+
+def computeVerifyVersions(String existingFiles) {
+    def fileList = existingFiles.readLines()
+    def exclusionList = ['10.3.6.0', '12.1.1.0', '12.1.2.0.0', '12.1.3.0.0']
+    def versionList = []
+    for (file in fileList) {
+        def matcher = file =~ /generatedOnline-(\d+(\.\d+){3,5}).json/
+        def fileVersion = matcher[0][1]
+        if (exclusionList.contains(fileVersion)) {
+            println('Excluding version ' + fileVersion)
+        } else {
+            println('Adding version ' + fileVersion)
+            versionList.add(fileVersion)
+        }
+    }
+    versions_to_verify = versionList
+    print('versions_to_verify = ' + versions_to_verify)
+}
+
+def getComputedVersions() {
+    return versions_to_verify
+}
+
+def getNumberOfFailures() {
+    return failed_versions.size()
+}
+
+def setFailedEmailBody(failuresList) {
+    build_failed_email_body = failuresList
+}
+
+def getFailedEmailBody() {
+    return String.join("\n", build_failed_email_body)
+}
+
+pipeline {
+    agent any
+
+    environment {
+        oci_cli_exe = '/usr/bin/oci'
+        oci_profile_name = 'WDTBUILD'
+        ocir_repo_name = 'wdt/jenkins-alias-test-slave'
+        ocir_compartment_id = 'ocid1.tenancy.oc1..aaaaaaaahmcbb5mp2h6toh4vj7ax526xtmihrneoumyat557rvlolsx63imq'
+
+        oci_os_namespace_name = "${env.WDT_ALIAS_TEST_TENANCY}"
+        oci_os_bucket_name = 'wdt-alias-test-files'
+        oci_os_prefix = 'generatedOnline'
+
+        downstream_job_name = 'wdt-alias-test-verify-child'
+    }
+    stages {
+        stage ('Environment') {
+            tools {
+                maven 'maven-3.6.0'
+                jdk 'jdk8'
+            }
+            steps {
+                sh 'env|sort'
+            }
+        }
+        stage ('Compute Versions') {
+            environment {
+                oci_files = sh(script: "${oci_cli_exe} os object list --profile ${oci_profile_name} --bucket-name ${oci_os_bucket_name} --namespace ${oci_os_namespace_name} --prefix ${oci_os_prefix} | jq -r '.data[].name'", returnStdout: true).trim()
+            }
+            steps {
+                computeVerifyVersions("${oci_files}")
+            }
+        }
+        stage ('Build') {
+            tools {
+                maven 'maven-3.6.0'
+                jdk 'jdk8'
+            }
+            steps {
+                sh 'mvn clean install -DskipTests'
+                sh "cp ${WORKSPACE}/installer/target/weblogic-deploy.zip ${WORKSPACE}/"
+                archiveArtifacts 'weblogic-deploy.zip'
+            }
+        }
+        stage ('Call Child Process') {
+            steps {
+                script {
+                    def versions = getComputedVersions()
+                    echo "computed versions = ${versions}"
+                    def failureCount = 0
+                    def failures = []
+                    for (String version in versions) {
+                        echo "Calling ${downstream_job_name} for WebLogic Server version ${version}"
+                        def jobResponse = build job: "${downstream_job_name}", propagate: false, parameters: [
+                            string(name: "parent_git_commit", value: "${GIT_COMMIT}"),
+                            string(name: "parent_job_name", value: "${JOB_NAME}"),
+                            string(name: "parent_job_number", value: "${BUILD_NUMBER}"),
+                            string(name: "wls_version", value: "${version}")
+                        ]
+                        if (jobResponse.getResult() != 'SUCCESS') {
+                            print(version + ' failed verification')
+                            failureCount += 1
+
+                            def buildJobName = "${downstream_job_name}"
+                            def buildJobNumber = jobResponse.getNumber()
+                            def buildJobURL = jobResponse.getAbsoluteUrl()
+
+                            if (failures.isEmpty()) {
+                                failures.add("Build <${env.BUILD_URL}|${env.JOB_NAME}:${env.BUILD_NUMBER}> failed:")
+                            }
+                            failures.add("\t${failureCount}.) ${version} Verification Failed: <${buildJobURL}|${buildJobName}:${buildJobNumber}>")
+                        } else {
+                            print(version + ' passed verification')
+                        }
+                    }
+                    if (failureCount > 0) {
+                        setFailedEmailBody(failures)
+                        error("${failureCount} version(s) failed verification")
+                    }
+                }
+            }
+        }
+    }
+    post {
+        failure {
+            slackSend channel: '#wkt-build-failure-notifications',
+                      botUser: false, color: 'danger',
+                      message: "${getFailedEmailBody()}"
+        }
+    }
+}

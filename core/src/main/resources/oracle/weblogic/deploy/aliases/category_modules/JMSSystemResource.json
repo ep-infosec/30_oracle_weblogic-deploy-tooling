@@ -1,0 +1,1155 @@
+{
+      "copyright": "Copyright (c) 2017, 2022, Oracle Corporation and/or its affiliates.",
+      "license": "Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl",
+      "wlst_type": "JMSSystemResource${:s}",
+      "online_bean": "weblogic.management.configuration.JMSSystemResourceMBean",
+      "child_folders_type": "multiple",
+      "short_name": "JMS",
+      "folders": {
+            "JmsResource": {
+                  "wlst_type": "${Jms:JMS}Resource",
+                  "online_bean": "weblogic.j2ee.descriptor.wl.JMSBean",
+                  "default_name_value": "${NO_NAME_0:%JMSSYSTEMRESOURCE%}",
+                  "folders": {
+                        "ConnectionFactory": {
+                              "wlst_type": "ConnectionFactor${y:ies}",
+                              "online_bean": "weblogic.j2ee.descriptor.wl.JMSConnectionFactoryBean",
+                              "child_folders_type": "multiple",
+                              "folders": {
+                                    "ClientParams": {
+                                          "wlst_type": "ClientParams",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.ClientParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%CONNECTIONFACTORY%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "AcknowledgePolicy":          [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "AcknowledgePolicy",          "wlst_path": "WP001", "default_value": "${__NULL__:All}",    "wlst_type": "string"  } ],
+                                                "AllowCloseInOnMessage":      [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "AllowCloseInOnMessage",      "wlst_path": "WP001", "default_value": "true",               "wlst_type": "boolean" } ],
+                                                "ClientId":                   [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ClientId",                   "wlst_path": "WP001", "default_value": null,                 "wlst_type": "string"  } ],
+                                                "ClientIdPolicy":             [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ClientIdPolicy",             "wlst_path": "WP001", "default_value": "Restricted",         "wlst_type": "string", "get_method": "LSA"} ],
+                                                "MessagesMaximum":            [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessagesMaximum",            "wlst_path": "WP001", "default_value": "${0:10}",            "wlst_type": "integer" } ],
+                                                "MulticastOverrunPolicy":     [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MulticastOverrunPolicy",     "wlst_path": "WP001", "default_value": "${__NULL__:KeepOld}",    "wlst_type": "string"  } ],
+                                                "ReconnectBlockingMillis":    [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ReconnectBlockingMillis",    "wlst_path": "WP001", "default_value": 60000,                "wlst_type": "long"    } ],
+                                                "ReconnectPolicy":            [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ReconnectPolicy",            "wlst_path": "WP001", "default_value": "producer",           "wlst_type": "string", "get_method": "LSA"} ],
+                                                "SubscriptionSharingPolicy":  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "SubscriptionSharingPolicy",  "wlst_path": "WP001", "default_value": "Exclusive",          "wlst_type": "string", "get_method": "LSA"} ],
+                                                "SynchronousPrefetchMode":    [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "SynchronousPrefetchMode",    "wlst_path": "WP001", "default_value": "${__NULL__:disabled}",   "wlst_type": "string"  } ],
+                                                "TotalReconnectPeriodMillis": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "TotalReconnectPeriodMillis", "wlst_path": "WP001", "default_value": -1,                   "wlst_type": "long"    } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/ConnectionFactor${y:ies}/%CONNECTIONFACTORY%/ClientParams/%CLIENTPARAMS%"
+                                          }
+                                    },
+                                    "DefaultDeliveryParams": {
+                                          "wlst_type": "DefaultDeliveryParams",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.DefaultDeliveryParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%CONNECTIONFACTORY%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "DefaultCompressionThreshold": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "DefaultCompressionThreshold", "wlst_path": "WP001", "default_value": "${0:2147483647}",        "wlst_type": "integer" } ],
+                                                "DefaultDeliveryMode":         [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "DefaultDeliveryMode",         "wlst_path": "WP001", "default_value": "${__NULL__:Persistent}", "wlst_type": "string"  } ],
+                                                "DefaultPriority":             [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "DefaultPriority",             "wlst_path": "WP001", "default_value": "${0:4}",                 "wlst_type": "integer" } ],
+                                                "DefaultRedeliveryDelay":      [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "DefaultRedeliveryDelay",      "wlst_path": "WP001", "default_value": 0,                        "wlst_type": "long"    } ],
+                                                "DefaultTimeToDeliver":        [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "DefaultTimeToDeliver",        "wlst_path": "WP001", "default_value": "${__NULL__:0}",          "wlst_type": "string"  } ],
+                                                "DefaultTimeToLive":           [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "DefaultTimeToLive",           "wlst_path": "WP001", "default_value": 0,                        "wlst_type": "long"    } ],
+                                                "DefaultUnitOfOrder":          [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "DefaultUnitOfOrder",          "wlst_path": "WP001", "default_value": null,                     "wlst_type": "string", "restart_required": "true" } ],
+                                                "SendTimeout":                 [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "SendTimeout",                 "wlst_path": "WP001", "default_value": "${0:10}",                "wlst_type": "long"    } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/ConnectionFactor${y:ies}/%CONNECTIONFACTORY%/DefaultDeliveryParams/%DEFAULTDELIVERYPARAMS%"
+                                          }
+                                    },
+                                    "FlowControlParams": {
+                                          "wlst_type": "FlowControlParams",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.FlowControlParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%CONNECTIONFACTORY%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "FlowControlEnabled":   [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "FlowControlEnabled",   "wlst_path": "WP001", "default_value": "true",                "wlst_type": "boolean"} ],
+                                                "FlowInterval":         [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "FlowInterval",         "wlst_path": "WP001", "default_value": "${0:60}",             "wlst_type": "integer"} ],
+                                                "FlowMaximum":          [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "FlowMaximum",          "wlst_path": "WP001", "default_value": "${0:500}",            "wlst_type": "integer"} ],
+                                                "FlowMinimum":          [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "FlowMinimum",          "wlst_path": "WP001", "default_value": "${0:50}",             "wlst_type": "integer"} ],
+                                                "FlowSteps":            [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "FlowSteps",            "wlst_path": "WP001", "default_value": "${0:10}",             "wlst_type": "integer"} ],
+                                                "OneWaySendMode":       [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "OneWaySendMode",       "wlst_path": "WP001", "default_value": "${__NULL__:disabled}",    "wlst_type": "string" } ],
+                                                "OneWaySendWindowSize": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "OneWaySendWindowSize", "wlst_path": "WP001", "default_value": 1,                     "wlst_type": "integer"} ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/ConnectionFactor${y:ies}/%CONNECTIONFACTORY%/FlowControlParams/%FLOWCONTROLPARAMS%"
+                                          }
+                                    },
+                                    "LoadBalancingParams": {
+                                          "wlst_type": "LoadBalancingParams",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.LoadBalancingParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%CONNECTIONFACTORY%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "LoadBalancingEnabled":         [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "LoadBalancingEnabled",          "wlst_path": "WP001", "default_value": "true",               "wlst_type": "boolean"} ],
+                                                "ProducerLoadBalancingPolicy":  [ {"version": "[12.2.1.4,)",   "wlst_mode": "both", "wlst_name": "ProducerLoadBalancingPolicy",   "wlst_path": "WP001", "default_value": "${__NULL__:Per-Member}", "wlst_type": "string"} ],
+                                                "ServerAffinityEnabled":        [ { "version": "[10,)",        "wlst_mode": "both", "wlst_name": "ServerAffinityEnabled",         "wlst_path": "WP001", "default_value": "true",               "wlst_type": "boolean"} ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/ConnectionFactor${y:ies}/%CONNECTIONFACTORY%/LoadBalancingParams/%LOADBALANCINGPARAMS%"
+                                          }
+                                    },
+                                    "SecurityParams": {
+                                          "wlst_type": "SecurityParams",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.SecurityParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%CONNECTIONFACTORY%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "AttachJMSXUserId": [ {"version": "[10,)",          "wlst_mode": "both",  "wlst_name": "AttachJMSXUserId", "wlst_path": "WP001", "default_value": "false",                  "wlst_type": "boolean", "get_method": "${LSA:GET}" } ],
+                                                "SecurityPolicy":   [ {"version": "[12.2.1.1,)",    "wlst_mode": "both",    "wlst_name": "SecurityPolicy",   "wlst_path": "WP001", "default_value": "${__NULL__:ThreadBased}",    "wlst_type": "string",  "get_method": "${LSA:GET}" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/ConnectionFactor${y:ies}/%CONNECTIONFACTORY%/SecurityParams/%SECURITYPARAMS%"
+                                          }
+                                    },
+                                    "TransactionParams": {
+                                          "wlst_type": "TransactionParams",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.TransactionParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%CONNECTIONFACTORY%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "TransactionTimeout":         [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "TransactionTimeout",         "wlst_path": "WP001", "default_value": "${0:3600}",    "wlst_type": "long"   } ],
+                                                "XAConnectionFactoryEnabled": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "XAConnectionFactoryEnabled", "wlst_path": "WP001", "default_value": "false",        "wlst_type": "boolean"} ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/ConnectionFactor${y:ies}/%CONNECTIONFACTORY%/TransactionParams/%TRANSACTIONPARAMS%"
+                                          }
+                                    }
+                              },
+                              "attributes": {
+                                    "DefaultTargetingEnabled": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "DefaultTargetingEnabled", "wlst_path": "WP001", "default_value": null,   "wlst_type": "boolean", "restart_required": "true"} ],
+                                    "JNDIName":                [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "JNDIName",                "wlst_path": "WP001", "default_value": null,   "wlst_type": "string"   } ],
+                                    "LocalJNDIName":           [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "LocalJNDIName",           "wlst_path": "WP001", "default_value": null,   "wlst_type": "string"   } ],
+                                    "Notes":                   [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Notes",                   "wlst_path": "WP001", "default_value": null,   "wlst_type": "string"   } ],
+                                    "SubDeploymentName":       [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "SubDeploymentName",       "wlst_path": "WP001", "default_value": null,   "derived_default": "${:true}",  "wlst_type": "string",  "restart_required": "true" } ]
+                              },
+                              "wlst_attributes_path": "WP001",
+                              "wlst_paths": {
+                                    "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/ConnectionFactor${y:ies}/%CONNECTIONFACTORY%"
+                              }
+                        },
+                        "DestinationKey": {
+                              "wlst_type": "DestinationKey${:s}",
+                              "online_bean": "weblogic.j2ee.descriptor.wl.DestinationKeyBean",
+                              "child_folders_type": "multiple",
+                              "folders": {},
+                              "attributes": {
+                                    "KeyType":   [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "KeyType",   "wlst_path": "WP001", "default_value": "${__NULL__:String}",    "wlst_type": "string", "restart_required": "true" } ],
+                                    "Notes":     [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Notes",     "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string"  } ],
+                                    "Property":  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Property",  "wlst_path": "WP001", "default_value": "${__NULL__:JMSMessageID}",  "wlst_type": "string", "restart_required": "true" } ],
+                                    "SortOrder": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "SortOrder", "wlst_path": "WP001", "default_value": "${__NULL__:Ascending}", "wlst_type": "string", "restart_required": "true" } ]
+                              },
+                              "wlst_attributes_path": "WP001",
+                              "wlst_paths": {
+                                    "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/DestinationKey${:s}/%DESTINATIONKEY%"
+                              }
+                        },
+                        "DistributedQueue": {
+                              "wlst_type": "DistributedQueue${:s}",
+                              "online_bean": "weblogic.j2ee.descriptor.wl.DistributedQueueBean",
+                              "child_folders_type": "multiple",
+                              "folders": {
+                                    "DistributedQueueMember": {
+                                          "wlst_type": "DistributedQueueMember${:s}",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.DistributedDestinationMemberBean",
+                                          "child_folders_type": "multiple",
+                                          "folders": {},
+                                          "attributes": {
+                                                "Notes":                   [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Notes",                   "wlst_path": "WP001", "default_value": null,     "wlst_type": "string" } ],
+                                                "PhysicalDestinationName": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "PhysicalDestinationName", "wlst_path": "WP001", "default_value": null,     "derived_default": "${:true}",    "wlst_type": "string" } ],
+                                                "Weight":                  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Weight",                  "wlst_path": "WP001", "default_value": "${0:1}", "wlst_type": "integer"} ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/DistributedQueue${:s}/%DISTRIBUTEDQUEUE%/DistributedQueueMember${:s}/%DISTRIBUTEDQUEUEMEMBER%"
+                                          }
+                                    }
+                              },
+                              "attributes": {
+                                    "ForwardDelay":                [ {"version": "[10,)",         "wlst_mode": "both",    "wlst_name": "ForwardDelay",                "wlst_path": "WP001", "default_value": "${0:-1}",                "wlst_type": "integer" } ],
+                                    "JNDIName":                    [ {"version": "[10,)",         "wlst_mode": "both",    "wlst_name": "JNDIName",                    "wlst_path": "WP001", "default_value": null,                     "wlst_type": "string"  } ],
+                                    "LoadBalancingPolicy":         [ {"version": "[10,)",         "wlst_mode": "both",    "wlst_name": "LoadBalancingPolicy",         "wlst_path": "WP001", "default_value": "${__NULL__:Round-Robin}",    "wlst_type": "string"  } ],
+                                    "LocalJNDIName":               [ {"version": "[10,)",         "wlst_mode": "offline", "wlst_name": "LocalJNDIName",               "wlst_path": "WP001", "default_value": null,                     "wlst_type": "string", "get_method": "LSA"} ],
+                                    "Notes":                       [ {"version": "[10,)",         "wlst_mode": "both",    "wlst_name": "Notes",                       "wlst_path": "WP001", "default_value": null,                     "wlst_type": "string"  } ],
+                                    "ResetDeliveryCountOnForward": [ {"version": "[10,)",         "wlst_mode": "both",    "wlst_name": "ResetDeliveryCountOnForward", "wlst_path": "WP001", "default_value": "true",                   "wlst_type": "boolean" } ],
+                                    "SafExportPolicy":             [ {"version": "[10,)",         "wlst_mode": "both",    "wlst_name": "${Saf:SAF}ExportPolicy",      "wlst_path": "WP001", "default_value": "All",                    "wlst_type": "string", "get_method": "LSA", "restart_required": "true"} ],
+                                    "UnitOfOrderRouting":          [ {"version": "[10,12.2.1.2)", "wlst_mode": "both",    "wlst_name": "UnitOfOrderRouting",          "wlst_path": "WP001", "default_value": "Hash",                   "wlst_type": "string", "get_method": "LSA", "restart_required": "true"} ,
+                                                                     {"version": "[12.2.1.2,)",   "wlst_mode": "both",    "wlst_name": "UnitOfOrderRouting",          "wlst_path": "WP001", "default_value": "${__NULL__:Hash}",       "wlst_type": "string", "get_method": "LSA", "restart_required": "true"} ]
+                              },
+                              "wlst_attributes_path": "WP001",
+                              "wlst_paths": {
+                                    "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/DistributedQueue${:s}/%DISTRIBUTEDQUEUE%"
+                              }
+                        },
+                        "DistributedTopic": {
+                              "wlst_type": "DistributedTopic${:s}",
+                              "online_bean": "weblogic.j2ee.descriptor.wl.DistributedTopicBean",
+                              "child_folders_type": "multiple",
+                              "folders": {
+                                    "DistributedTopicMember": {
+                                          "wlst_type": "DistributedTopicMember${:s}",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.DistributedDestinationMemberBean",
+                                          "child_folders_type": "multiple",
+                                          "folders": {},
+                                          "attributes": {
+                                                "Notes":                   [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Notes",                   "wlst_path": "WP001", "default_value": null,     "wlst_type": "string" } ],
+                                                "PhysicalDestinationName": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "PhysicalDestinationName", "wlst_path": "WP001", "default_value": null,  "derived_default": "${:true}",   "wlst_type": "string" } ],
+                                                "Weight":                  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Weight",                  "wlst_path": "WP001", "default_value": "${0:1}", "wlst_type": "integer"} ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/DistributedTopic${:s}/%DISTRIBUTEDTOPIC%/DistributedTopicMember${:s}/%DISTRIBUTEDTOPICMEMBER%"
+                                          }
+                                    }
+                              },
+                              "attributes": {
+                                    "JNDIName":            [ {"version": "[10,)",         "wlst_mode": "both",    "wlst_name": "JNDIName",               "wlst_path": "WP001", "default_value": null,                     "wlst_type": "string"  } ],
+                                    "LoadBalancingPolicy": [ {"version": "[10,)",         "wlst_mode": "both",    "wlst_name": "LoadBalancingPolicy",    "wlst_path": "WP001", "default_value": "${__NULL__:Round-Robin}",    "wlst_type": "string"  } ],
+                                    "LocalJNDIName":       [ {"version": "[10,)",         "wlst_mode": "offline", "wlst_name": "LocalJNDIName",          "wlst_path": "WP001", "default_value": null,                     "wlst_type": "string", "get_method": "LSA"} ],
+                                    "Notes":               [ {"version": "[10,)",         "wlst_mode": "both",    "wlst_name": "Notes",                  "wlst_path": "WP001", "default_value": null,                     "wlst_type": "string"  } ],
+                                    "SafExportPolicy":     [ {"version": "[10,)",         "wlst_mode": "both",    "wlst_name": "${Saf:SAF}ExportPolicy", "wlst_path": "WP001", "default_value": "All",                    "wlst_type": "string", "get_method": "LSA", "restart_required": "true"} ],
+                                    "UnitOfOrderRouting":  [ {"version": "[10,12.2.1.2)", "wlst_mode": "both",    "wlst_name": "UnitOfOrderRouting",     "wlst_path": "WP001", "default_value": "Hash",                   "wlst_type": "string", "get_method": "LSA", "restart_required": "true"} ,
+                                                             {"version": "[12.2.1.2,)",   "wlst_mode": "both",    "wlst_name": "UnitOfOrderRouting",     "wlst_path": "WP001", "default_value": "${__NULL__:Hash}",       "wlst_type": "string", "get_method": "LSA", "restart_required": "true"} ]
+                              },
+                              "wlst_attributes_path": "WP001",
+                              "wlst_paths": {
+                                    "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/DistributedTopic${:s}/%DISTRIBUTEDTOPIC%"
+                              }
+                        },
+                        "ForeignServer": {
+                              "wlst_type": "ForeignServer${:s}",
+                              "online_bean": "weblogic.j2ee.descriptor.wl.ForeignServerBean",
+                              "child_folders_type": "multiple",
+                              "folders": {
+                                    "ForeignConnectionFactory": {
+                                          "wlst_type": "ForeignConnectionFactor${y:ies}",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.ForeignConnectionFactoryBean",
+                                          "child_folders_type": "multiple",
+                                          "folders": {},
+                                          "attributes": {
+                                                "ConnectionHealthChecking": [ {"version": "[10,)",               "wlst_mode": "both", "wlst_name": "ConnectionHealthChecking", "wlst_path": "WP001", "default_value": "enabled", "wlst_type": "string"    } ],
+                                                "LocalJNDIName":            [ {"version": "[10,)",               "wlst_mode": "both", "wlst_name": "LocalJNDIName",            "wlst_path": "WP001", "default_value": null,      "wlst_type": "string",     "restart_required": "true" } ],
+                                                "Notes":                    [ {"version": "[10,)",               "wlst_mode": "both", "wlst_name": "Notes",                    "wlst_path": "WP001", "default_value": null,      "wlst_type": "string"    } ],
+                                                "PasswordEncrypted":        [ {"version": "[10,)",               "wlst_mode": "both", "wlst_name": "PasswordEncrypted",        "wlst_path": "WP001", "default_value": null,      "wlst_type": "password",   "get_method": "GET"} ],
+                                                "RemoteJndiName":           [ {"version": "[10,12.2.1.4)",       "wlst_mode": "both", "wlst_name": "Remote${Jndi:JNDI}Name",   "wlst_path": "WP001", "default_value": null,      "wlst_type": "string",     "get_method": "LSA", "restart_required": "true"} ,
+                                                                              {"version": "[12.2.1.4,)",         "wlst_mode": "both", "wlst_name": "Remote${Jndi:JNDI}Name",   "wlst_path": "WP001", "default_value": null,      "wlst_type": "string",     "get_method": "LSA" } ],
+                                                "Username":                 [ {"version": "[10,)",               "wlst_mode": "both", "wlst_name": "Username",                 "wlst_path": "WP001", "default_value": null,      "wlst_type": "credential"} ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/ForeignServer${:s}/%FOREIGNSERVER%/ForeignConnectionFactor${y:ies}/%FOREIGNCONNECTIONFACTORY%"
+                                          }
+                                    },
+                                    "ForeignDestination": {
+                                          "wlst_type": "ForeignDestination${:s}",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.ForeignDestinationBean",
+                                          "child_folders_type": "multiple",
+                                          "folders": {},
+                                          "attributes": {
+                                                "LocalJNDIName":  [ {"version": "[10,)",               "wlst_mode": "both", "wlst_name": "LocalJNDIName",          "wlst_path": "WP001", "default_value": null,   "wlst_type": "string", "restart_required": "true" } ],
+                                                "Notes":          [ {"version": "[10,)",               "wlst_mode": "both", "wlst_name": "Notes",                  "wlst_path": "WP001", "default_value": null,   "wlst_type": "string"  } ],
+                                                "RemoteJndiName": [ {"version": "[10,12.2.1.4)",       "wlst_mode": "both", "wlst_name": "Remote${Jndi:JNDI}Name", "wlst_path": "WP001", "default_value": null,   "wlst_type": "string", "get_method": "LSA", "restart_required": "true" } ,
+                                                                    {"version": "[12.2.1.4,)",         "wlst_mode": "both", "wlst_name": "Remote${Jndi:JNDI}Name", "wlst_path": "WP001", "default_value": null,   "wlst_type": "string", "get_method": "LSA" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/ForeignServer${:s}/%FOREIGNSERVER%/ForeignDestination${:s}/%FOREIGNDESTINATION%"
+                                          }
+                                    },
+                                    "JNDIProperty": {
+                                          "wlst_type": "JNDIPropert${y:ies}",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.PropertyBean",
+                                          "child_folders_type": "multiple",
+                                          "folders": {},
+                                          "attributes": {
+                                                "Key":   [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Key",   "wlst_path": "WP001", "default_value": null,   "wlst_type": "string"} ],
+                                                "Value": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Value", "wlst_path": "WP001", "default_value": null,   "wlst_type": "string"} ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/ForeignServer${:s}/%FOREIGNSERVER%/JNDIPropert${y:ies}/%FOLDERNAME%"
+                                          }
+                                    }
+                              },
+                              "attributes": {
+                                    "ConnectionURL":                     [ {"version": "[10,12.2.1.4)",      "wlst_mode": "both", "wlst_name": "ConnectionURL",                         "wlst_path": "WP001", "default_value": null,                                             "wlst_type": "string",   "uses_path_tokens": "true", "restart_required": "true" } ,
+                                                                           {"version": "[12.2.1.4,)",        "wlst_mode": "both", "wlst_name": "ConnectionURL",                         "wlst_path": "WP001", "default_value": null,                                             "wlst_type": "string",   "uses_path_tokens": "true" } ],
+                                    "DefaultTargetingEnabled":           [ {"version": "[10,)",              "wlst_mode": "both", "wlst_name": "DefaultTargetingEnabled",               "wlst_path": "WP001", "default_value": null,                                             "wlst_type": "boolean",  "restart_required": "true" } ],
+                                    "InitialContextFactory":             [ {"version": "[10,)",              "wlst_mode": "both", "wlst_name": "InitialContextFactory",                 "wlst_path": "WP001", "default_value": "${__NULL__:weblogic.jndi.WLInitialContextFactory}",  "wlst_type": "string"    } ],
+                                    "JNDIPropertiesCredentialEncrypted": [ {"version": "[10,)",              "wlst_mode": "both", "wlst_name": "JNDIPropertiesCredentialEncrypted",     "wlst_path": "WP001", "default_value": null,                                             "wlst_type": "password", "get_method": "GET" } ],
+                                    "Notes":                             [ {"version": "[10,)",              "wlst_mode": "both", "wlst_name": "Notes",                                 "wlst_path": "WP001", "default_value": null,                                             "wlst_type": "string"    } ],
+                                    "SubDeploymentName":                 [ {"version": "[10,)",              "wlst_mode": "both", "wlst_name": "SubDeploymentName",                     "wlst_path": "WP001", "default_value": null,  "derived_default": "${:true}",                 "wlst_type": "string",   "restart_required": "true" } ]
+                              },
+                              "wlst_attributes_path": "WP001",
+                              "wlst_paths": {
+                                    "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/ForeignServer${:s}/%FOREIGNSERVER%"
+                              }
+                        },
+                        "Queue": {
+                              "wlst_type": "Queue${:s}",
+                              "online_bean": "weblogic.j2ee.descriptor.wl.QueueBean",
+                              "child_folders_type": "multiple",
+                              "folders": {
+                                    "DeliveryFailureParams": {
+                                          "wlst_type": "DeliveryFailureParams",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.DeliveryFailureParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%QUEUE%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "ErrorDestination":        [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ErrorDestination",        "wlst_path": "WP001", "default_value": null,                "wlst_type": "string", "get_method": "LSA", "set_method": "MBEAN.set_jms_error_destination_mbean", "set_mbean_type": "weblogic.j2ee.descriptor.wl.DestinationBean"} ],
+                                                "ExpirationLoggingPolicy": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ExpirationLoggingPolicy", "wlst_path": "WP001", "default_value": null,                "wlst_type": "string"  } ],
+                                                "ExpirationPolicy":        [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ExpirationPolicy",        "wlst_path": "WP001", "default_value": "${__NULL__:Discard}", "derived_default": "${:true}", "wlst_type": "string"  } ],
+                                                "RedeliveryLimit":         [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "RedeliveryLimit",         "wlst_path": "WP001", "default_value": -1,                  "derived_default": "${:true}", "wlst_type": "integer" } ],
+                                                "TemplateBean":            [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean",          "wlst_path": "WP001", "default_value": null,                "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Queue${:s}/%QUEUE%/DeliveryFailureParams/%DELIVERYFAILUREPARAMS%"
+                                          }
+                                    },
+                                    "DeliveryParamsOverrides": {
+                                          "wlst_type": "DeliveryParamsOverrides",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.DeliveryParamsOverridesBean",
+                                          "default_name_value": "${NO_NAME_0:%QUEUE%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "DeliveryMode":    [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "DeliveryMode",    "wlst_path": "WP001", "default_value": "${__NULL__:No-Delivery}",  "derived_default": "${:true}", "wlst_type": "string" } ],
+                                                "Priority":        [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Priority",        "wlst_path": "WP001", "default_value": "${0:-1}",              "derived_default": "${:true}", "wlst_type": "integer"} ],
+                                                "RedeliveryDelay": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "RedeliveryDelay", "wlst_path": "WP001", "default_value": "${0:-1}",              "derived_default": "${:true}", "wlst_type": "long"   } ],
+                                                "TemplateBean":    [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean",  "wlst_path": "WP001", "default_value": null,                   "wlst_type": "string",         "access": "RO" } ],
+                                                "TimeToDeliver":   [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "TimeToDeliver",   "wlst_path": "WP001", "default_value": "${__NULL__:-1}",       "derived_default": "${:true}", "wlst_type": "string" } ],
+                                                "TimeToLive":      [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "TimeToLive",      "wlst_path": "WP001", "default_value": "${0:-1}",              "derived_default": "${:true}", "wlst_type": "long"   } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Queue${:s}/%QUEUE%/DeliveryParamsOverrides/%DELIVERYPARAMSOVERRIDES%"
+                                          }
+                                    },
+                                    "MessageLoggingParams": {
+                                          "wlst_type": "MessageLoggingParams",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.MessageLoggingParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%QUEUE%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "MessageLoggingEnabled": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessageLoggingEnabled", "wlst_path": "WP001", "default_value": "false", "derived_default": "${:true}", "wlst_type": "boolean"} ],
+                                                "MessageLoggingFormat":  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessageLoggingFormat",  "wlst_path": "WP001", "default_value": null,    "wlst_type": "string" } ],
+                                                "TemplateBean":          [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean",        "wlst_path": "WP001", "default_value": null,    "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Queue${:s}/%QUEUE%/MessageLoggingParams/%MESSAGELOGGINGPARAMS%"
+                                          }
+                                    },
+                                    "Thresholds": {
+                                          "wlst_type": "Thresholds",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.ThresholdParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%QUEUE%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "BytesHigh":    [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "BytesHigh",    "wlst_path": "WP001", "default_value": "${0:9223372036854775807}", "derived_default": "${:true}", "wlst_type": "long" } ],
+                                                "BytesLow":     [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "BytesLow",     "wlst_path": "WP001", "default_value": "${0:9223372036854775807}", "derived_default": "${:true}", "wlst_type": "long" } ],
+                                                "MessagesHigh": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessagesHigh", "wlst_path": "WP001", "default_value": "${0:9223372036854775807}", "derived_default": "${:true}", "wlst_type": "long" } ],
+                                                "MessagesLow":  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessagesLow",  "wlst_path": "WP001", "default_value": "${0:9223372036854775807}", "derived_default": "${:true}", "wlst_type": "long" } ],
+                                                "TemplateBean": [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean", "wlst_path": "WP001", "default_value": null,                     "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Queue${:s}/%QUEUE%/Thresholds/%THRESHOLDS%"
+                                          }
+                                    }
+                              },
+                              "attributes": {
+                                    "AttachSender":                   [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "AttachSender",                          "wlst_path": "WP001", "default_value": "supports",             "derived_default": "${:true}", "wlst_type": "string",           "get_method": "LSA"} ],
+                                    "ConsumptionPausedAtStartup":     [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "ConsumptionPausedAtStartup",            "wlst_path": "WP001", "default_value": "false",                "derived_default": "${:true}", "wlst_type": "boolean",          "restart_required": "true" } ],
+                                    "DefaultTargetingEnabled":        [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "DefaultTargetingEnabled",               "wlst_path": "WP001", "default_value": null,                   "wlst_type": "boolean",          "restart_required": "true" } ],
+                                    "DefaultUnitOfOrder":             [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "DefaultUnitOfOrder",                    "wlst_path": "WP001", "default_value": "false",                "wlst_type": "boolean"           } ],
+                                    "DestinationKey":                 [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "DestinationKey${:s}",                   "wlst_path": "WP001", "default_value": null,                   "derived_default": "${:true}", "wlst_type": "${list:jarray}",   "wlst_read_type": "delimited_string[semicolon]", "get_method": "${LSA:GET}", "restart_required": "true" } ],
+                                    "ForwardDelay":                   [ {"version": "[12.2.1.2,)",      "wlst_mode": "both", "wlst_name": "ForwardDelay",                          "wlst_path": "WP001", "default_value": "${0:-1}",              "wlst_type": "integer"           } ],
+                                    "IncompleteWorkExpirationTime":   [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "IncompleteWorkExpirationTime",          "wlst_path": "WP001", "default_value": "${0:-1}",              "wlst_type": "integer"           } ],
+                                    "InsertionPausedAtStartup":       [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "InsertionPausedAtStartup",              "wlst_path": "WP001", "default_value": "false",                "derived_default": "${:true}", "wlst_type": "boolean",          "restart_required": "true" } ],
+                                    "JNDIName":                       [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "JNDIName",                              "wlst_path": "WP001", "default_value": null,                   "wlst_type": "string"            } ],
+                                    "JmsCreateDestinationIdentifier": [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "${Jms:JMS}CreateDestinationIdentifier", "wlst_path": "WP001", "default_value": null,                   "wlst_type": "string",           "get_method": "LSA", "restart_required": "true" } ],
+                                    "LoadBalancingPolicy":            [ {"version": "[12.2.1.2,)",      "wlst_mode": "both", "wlst_name": "LoadBalancingPolicy",                   "wlst_path": "WP001", "default_value": "${__NULL__:Round-Robin}",  "wlst_type": "string"            } ],
+                                    "LocalJNDIName":                  [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "LocalJNDIName",                         "wlst_path": "WP001", "default_value": null,                   "wlst_type": "string"            } ],
+                                    "MaximumMessageSize":             [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "MaximumMessageSize",                    "wlst_path": "WP001", "default_value": "${0:2147483647}",      "derived_default": "${:true}", "wlst_type": "integer"           } ],
+                                    "MessagingPerformancePreference": [ {"version": "[10,12.2.1.1)",    "wlst_mode": "both", "wlst_name": "MessagingPerformancePreference",        "wlst_path": "WP001", "default_value": "${50:25}",             "derived_default": "${:true}", "wlst_type": "integer"           } ,
+                                                                        {"version": "[12.2.1.1,)",      "wlst_mode": "both", "wlst_name": "MessagingPerformancePreference",        "wlst_path": "WP001", "default_value": 25,                     "derived_default": "${:true}", "wlst_type": "integer"           } ],
+                                    "Notes":                          [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "Notes",                                 "wlst_path": "WP001", "default_value": null,                   "wlst_type": "string"            } ],
+                                    "ProductionPausedAtStartup":      [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "ProductionPausedAtStartup",             "wlst_path": "WP001", "default_value": "false",                "derived_default": "${:true}", "wlst_type": "boolean",          "restart_required": "true" } ],
+                                    "Quota":                          [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "Quota",                                 "wlst_path": "WP001", "default_value": null,                   "wlst_type": "string",           "get_method": "LSA", "set_method": "MBEAN.set_jms_quota_mbean",    "set_mbean_type": "weblogic.j2ee.descriptor.wl.QuotaBean"} ],
+                                    "ResetDeliveryCountOnForward":    [ {"version": "[12.2.1.2,)",      "wlst_mode": "both", "wlst_name": "ResetDeliveryCountOnForward",           "wlst_path": "WP001", "default_value": "true",                 "wlst_type": "boolean"           } ],
+                                    "SafExportPolicy":                [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "${Saf:SAF}ExportPolicy",                "wlst_path": "WP001", "default_value": "All",                  "derived_default": "${:true}", "wlst_type": "string",           "get_method": "LSA", "restart_required": "true" } ],
+                                    "SubDeploymentName":              [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "SubDeploymentName",                     "wlst_path": "WP001", "default_value": null, "derived_default": "${:true}",  "wlst_type": "string", "get_method": "LSA", "restart_required": "true" } ],
+                                    "Template":                       [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "Template",                              "wlst_path": "WP001", "default_value": null,                   "wlst_type": "string",           "get_method": "LSA", "set_method": "MBEAN.set_jms_template_mbean", "set_mbean_type": "weblogic.j2ee.descriptor.wl.TemplateBean", "restart_required": "true" } ],
+                                    "UnitOfOrderRouting":             [ {"version": "[12.2.1.2,)",      "wlst_mode": "both", "wlst_name": "UnitOfOrderRouting",                    "wlst_path": "WP001", "default_value": "${__NULL__:Hash}",     "wlst_type": "string",           "restart_required": "true" } ],
+                                    "UnitOfWorkHandlingPolicy":       [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "UnitOfWorkHandlingPolicy",              "wlst_path": "WP001", "default_value": "PassThrough",          "derived_default": "${:true}", "wlst_type": "string",           "get_method": "LSA"} ]
+                              },
+                              "wlst_attributes_path": "WP001",
+                              "wlst_paths": {
+                                    "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Queue${:s}/%QUEUE%"
+                              }
+                        },
+                        "Quota": {
+                              "wlst_type": "Quota${:s}",
+                              "online_bean": "weblogic.j2ee.descriptor.wl.QuotaBean",
+                              "child_folders_type": "multiple",
+                              "folders": {},
+                              "attributes": {
+                                    "BytesMaximum":    [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "BytesMaximum",    "wlst_path": "WP001", "default_value": "${0:9223372036854775807}", "wlst_type": "long"        } ],
+                                    "MessagesMaximum": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessagesMaximum", "wlst_path": "WP001", "default_value": "${0:9223372036854775807}", "wlst_type": "long"        } ],
+                                    "Notes":           [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Notes",           "wlst_path": "WP001", "default_value": null,                       "wlst_type": "string"      } ],
+                                    "Policy":          [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Policy",          "wlst_path": "WP001", "default_value": "FIFO",                     "wlst_type": "string"      } ],
+                                    "Shared":          [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Shared",          "wlst_path": "WP001", "default_value": "true",                     "wlst_type": "boolean",    "restart_required": "true" } ]
+                              },
+                              "wlst_attributes_path": "WP001",
+                              "wlst_paths": {
+                                    "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Quota${:s}/%QUOTA%"
+                              }
+                        },
+                        "SAFErrorHandling": {
+                              "wlst_type": "SAFErrorHandling${:s}",
+                              "online_bean": "weblogic.j2ee.descriptor.wl.SAFErrorHandlingBean",
+                              "child_folders_type": "multiple",
+                              "folders": {},
+                              "attributes": {
+                                    "LogFormat":           [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "LogFormat",                  "wlst_path": "WP001", "default_value": null,                "wlst_type": "string", "restart_required": "true" } ],
+                                    "Notes":               [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Notes",                      "wlst_path": "WP001", "default_value": null,                "wlst_type": "string"  } ],
+                                    "Policy":              [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Policy",                     "wlst_path": "WP001", "default_value": "${__NULL__:Discard}",   "wlst_type": "string", "restart_required": "true" } ],
+                                    "SafErrorDestination": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "${Saf:SAF}ErrorDestination", "wlst_path": "WP001", "default_value": null,                "wlst_type": "string", "get_method": "LSA", "set_method": "MBEAN.set_saf_error_destination_mbean"} ]
+                              },
+                              "wlst_attributes_path": "WP001",
+                              "wlst_paths": {
+                                    "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/SAFErrorHandling${:s}/%SAFERRORHANDLING%"
+                              }
+                        },
+                        "SAFImportedDestinations": {
+                              "wlst_type": "SAFImportedDestinations",
+                              "online_bean": "weblogic.j2ee.descriptor.wl.SAFImportedDestinationsBean",
+                              "child_folders_type": "multiple",
+                              "folders": {
+                                    "SAFQueue": {
+                                          "wlst_type": "SAFQueue${:s}",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.SAFQueueBean",
+                                          "child_folders_type": "multiple",
+                                          "folders": {
+                                                "MessageLoggingParams": {
+                                                      "wlst_type": "MessageLoggingParams",
+                                                      "online_bean": "weblogic.j2ee.descriptor.wl.MessageLoggingParamsBean",
+                                                      "default_name_value": "${NO_NAME_0:%SAFQUEUE%}",
+                                                      "folders": {},
+                                                      "attributes": {
+                                                            "MessageLoggingEnabled": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessageLoggingEnabled", "wlst_path": "WP001", "default_value": null,   "derived_default": "${:true}", "wlst_type": "boolean"} ],
+                                                            "MessageLoggingFormat":  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessageLoggingFormat",  "wlst_path": "WP001", "default_value": null,   "wlst_type": "string" } ],
+                                                            "TemplateBean":          [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean",        "wlst_path": "WP001", "default_value": null,   "wlst_type": "string", "access": "RO" } ]
+                                                      },
+                                                      "wlst_attributes_path": "WP001",
+                                                      "wlst_paths": {
+                                                            "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/SAFImportedDestinations/%SAFIMPORTEDDESTINATION%/SAFQueue${:s}/%SAFQUEUE%/MessageLoggingParams/%MESSAGELOGGINGPARAMS%"
+                                                      }
+                                                }
+                                          },
+                                          "attributes": {
+                                                "LocalJNDIName":           [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "LocalJNDIName",           "wlst_path": "WP001", "default_value": null,                             "wlst_type": "string"  } ],
+                                                "NonPersistentQos":        [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "NonPersistentQos",        "wlst_path": "WP001", "default_value": "${At-Most-Once:At-Least-Once}",  "wlst_type": "string", "get_method": "LSA"} ],
+                                                "Notes":                   [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "Notes",                   "wlst_path": "WP001", "default_value": null,                             "wlst_type": "string"  } ],
+                                                "PersistentQos":           [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "PersistentQos",           "wlst_path": "WP001", "default_value": "Exactly-Once",                   "wlst_type": "string", "get_method": "LSA"} ],
+                                                "RemoteJndiName":          [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "Remote${Jndi:JNDI}Name",  "wlst_path": "WP001", "default_value": null,                             "wlst_type": "string", "get_method": "LSA"} ],
+                                                "SAFErrorHandling":        [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "SAFErrorHandling",        "wlst_path": "WP001", "default_value": null,                             "wlst_type": "string", "get_method": "LSA", "set_method": "MBEAN.set_saf_error_handling_mbean", "set_mbean_type": "weblogic.j2ee.descriptor.wl.SAFErrorHandlingBean", "restart_required": "true" } ],
+                                                "TimeToLiveDefault":       [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "TimeToLiveDefault",       "wlst_path": "WP001", "default_value": "${0:3600000}",                   "derived_default": "${:true}", "wlst_type": "long"    } ],
+                                                "UnitOfOrderRouting":      [ {"version": "[10,12.2.1.2)",    "wlst_mode": "both", "wlst_name": "UnitOfOrderRouting",      "wlst_path": "WP001", "default_value": "Hash",                           "derived_default": "${:true}", "wlst_type": "string", "get_method": "LSA", "restart_required": "true"} ,
+                                                                             {"version": "[12.2.1.2,)",      "wlst_mode": "both", "wlst_name": "UnitOfOrderRouting",      "wlst_path": "WP001", "default_value": "${__NULL__:Hash}",               "derived_default": "${:true}", "wlst_type": "string", "get_method": "LSA", "restart_required": "true"} ],
+                                                "UseSAFTimeToLiveDefault": [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "UseSAFTimeToLiveDefault", "wlst_path": "WP001", "default_value": "false",                          "derived_default": "${:true}", "wlst_type": "boolean"  } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/SAFImportedDestinations/%SAFIMPORTEDDESTINATION%/SAFQueue${:s}/%SAFQUEUE%"
+                                          }
+                                    },
+                                    "SAFTopic": {
+                                          "wlst_type": "SAFTopic${:s}",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.SAFTopicBean",
+                                          "child_folders_type": "multiple",
+                                          "folders": {
+                                                "MessageLoggingParams": {
+                                                      "wlst_type": "MessageLoggingParams",
+                                                      "online_bean": "weblogic.j2ee.descriptor.wl.MessageLoggingParamsBean",
+                                                      "default_name_value": "${NO_NAME_0:%SAFTOPIC%}",
+                                                      "folders": {},
+                                                      "attributes": {
+                                                            "MessageLoggingEnabled": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessageLoggingEnabled", "wlst_path": "WP001", "default_value": null,   "derived_default": "${:true}", "wlst_type": "boolean"} ],
+                                                            "MessageLoggingFormat":  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessageLoggingFormat",  "wlst_path": "WP001", "default_value": null,   "wlst_type": "string" } ],
+                                                            "TemplateBean":          [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean",        "wlst_path": "WP001", "default_value": null,   "wlst_type": "string", "access": "RO" } ]
+                                                      },
+                                                      "wlst_attributes_path": "WP001",
+                                                      "wlst_paths": {
+                                                            "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/SAFImportedDestinations/%SAFIMPORTEDDESTINATION%/SAFTopic${:s}/%SAFTOPIC%/MessageLoggingParams/%MESSAGELOGGINGPARAMS%"
+                                                      }
+                                                }
+                                          },
+                                          "attributes": {
+                                                "LocalJNDIName":           [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "LocalJNDIName",           "wlst_path": "WP001", "default_value": null,                            "wlst_type": "string"  } ],
+                                                "NonPersistentQos":        [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "NonPersistentQos",        "wlst_path": "WP001", "default_value": "${At-Most-Once:At-Least-Once}", "wlst_type": "string"  } ],
+                                                "Notes":                   [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "Notes",                   "wlst_path": "WP001", "default_value": null,                            "wlst_type": "string"  } ],
+                                                "PersistentQos":           [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "PersistentQos",           "wlst_path": "WP001", "default_value": "Exactly-Once",                  "wlst_type": "string"  } ],
+                                                "RemoteJndiName":          [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "Remote${Jndi:JNDI}Name",  "wlst_path": "WP001", "default_value": null,                            "wlst_type": "string", "get_method": "LSA"} ],
+                                                "SAFErrorHandling":        [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "SAFErrorHandling",        "wlst_path": "WP001", "default_value": null,                            "wlst_type": "string", "get_method": "LSA", "set_method": "MBEAN.set_saf_error_handling_mbean", "set_mbean_type": "weblogic.j2ee.descriptor.wl.SAFErrorHandlingBean", "restart_required": "true"} ],
+                                                "TimeToLiveDefault":       [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "TimeToLiveDefault",       "wlst_path": "WP001", "default_value": "${0:3600000}",                  "derived_default": "${:true}", "wlst_type": "long"    } ],
+                                                "UnitOfOrderRouting":      [ {"version": "[10,12.2.1.2)", "wlst_mode": "both", "wlst_name": "UnitOfOrderRouting",      "wlst_path": "WP001", "default_value": "Hash",                          "derived_default": "${:true}", "wlst_type": "string", "restart_required": "true" } ,
+                                                                             {"version": "[12.2.1.2,)",   "wlst_mode": "both", "wlst_name": "UnitOfOrderRouting",      "wlst_path": "WP001", "default_value": "${__NULL__:Hash}",              "derived_default": "${:true}", "wlst_type": "string", "restart_required": "true" } ],
+                                                "UseSAFTimeToLiveDefault": [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "UseSAFTimeToLiveDefault", "wlst_path": "WP001", "default_value": "false",                         "derived_default": "${:true}", "wlst_type": "boolean" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/SAFImportedDestinations/%SAFIMPORTEDDESTINATION%/SAFTopic${:s}/%SAFTOPIC%"
+                                          }
+                                    },
+                                    "MessageLoggingParams": {
+                                          "wlst_type": "MessageLoggingParams",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.MessageLoggingParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%SAFIMPORTEDDESTINATION%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "MessageLoggingEnabled": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessageLoggingEnabled", "wlst_path": "WP001", "derived_default": "${:true}", "default_value": null,   "wlst_type": "boolean"} ],
+                                                "MessageLoggingFormat":  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessageLoggingFormat",  "wlst_path": "WP001", "default_value": null,   "wlst_type": "string" } ],
+                                                "TemplateBean":          [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean",        "wlst_path": "WP001", "default_value": null,   "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/SAFImportedDestinations/%SAFIMPORTEDDESTINATION%/MessageLoggingParams/%MESSAGELOGGINGPARAMS%"
+                                          }
+                                    }
+                              },
+                              "attributes": {
+                                    "DefaultTargetingEnabled":        [ {"version": "[10,)",          "wlst_mode": "both", "wlst_name": "DefaultTargetingEnabled",        "wlst_path": "WP001", "default_value": null,                    "wlst_type": "boolean", "restart_required": "true"} ],
+                                    "ExactlyOnceLoadBalancingPolicy": [ {"version": "[12.2.1.4,)",    "wlst_mode": "both", "wlst_name": "ExactlyOnceLoadBalancingPolicy", "wlst_path": "WP001", "default_value": "${__NULL__:Per-Member}",    "wlst_type": "string",  "restart_required": "true"} ],
+                                    "JNDIPrefix":                     [ {"version": "[10,)",          "wlst_mode": "both", "wlst_name": "JNDIPrefix",                     "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string"   } ],
+                                    "Notes":                          [ {"version": "[10,)",          "wlst_mode": "both", "wlst_name": "Notes",                          "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string"   } ],
+                                    "SAFErrorHandling":               [ {"version": "[10,)",          "wlst_mode": "both", "wlst_name": "SAFErrorHandling",               "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string",  "get_method": "${LSA:GET}", "set_method": "MBEAN.set_saf_error_handling_mbean", "set_mbean_type": "weblogic.j2ee.descriptor.wl.SAFErrorHandlingBean", "restart_required": "true" } ],
+                                    "SAFRemoteContext":               [ {"version": "[10,)",          "wlst_mode": "both", "wlst_name": "SAFRemoteContext",               "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string",  "get_method": "${LSA:GET}", "set_method": "MBEAN.set_saf_remote_context_mbean", "set_mbean_type": "weblogic.j2ee.descriptor.wl.SAFRemoteContextBean"} ],
+                                    "SubDeploymentName":              [ {"version": "[10,)",          "wlst_mode": "both", "wlst_name": "SubDeploymentName",              "wlst_path": "WP001", "default_value": null, "derived_default": "${:true}", "wlst_type": "string",  "restart_required": "true" } ],
+                                    "TimeToLiveDefault":              [ {"version": "[10,)",          "wlst_mode": "both", "wlst_name": "TimeToLiveDefault",              "wlst_path": "WP001", "default_value": "${0:3600000}",          "wlst_type": "long"     } ],
+                                    "UnitOfOrderRouting":             [ {"version": "[10,12.2.1.2)",  "wlst_mode": "both", "wlst_name": "UnitOfOrderRouting",             "wlst_path": "WP001", "default_value": "Hash",                  "wlst_type": "string",  "get_method": "LSA", "restart_required": "true" } ,
+                                                                        {"version": "[12.2.1.2,)",    "wlst_mode": "both", "wlst_name": "UnitOfOrderRouting",             "wlst_path": "WP001", "default_value": "${__NULL__:Hash}",      "wlst_type": "string",  "get_method": "LSA", "restart_required": "true" } ],
+                                    "UseSAFTimeToLiveDefault":        [ {"version": "[10,)",          "wlst_mode": "both", "wlst_name": "UseSAFTimeToLiveDefault",        "wlst_path": "WP001", "default_value": "false",                 "wlst_type": "boolean"  } ]
+                              },
+                              "wlst_attributes_path": "WP001",
+                              "wlst_paths": {
+                                    "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/SAFImportedDestinations/%SAFIMPORTEDDESTINATION%"
+                              }
+                        },
+                        "SAFRemoteContext": {
+                              "wlst_type": "SAFRemoteContext${:s}",
+                              "online_bean": "weblogic.j2ee.descriptor.wl.SAFRemoteContextBean",
+                              "child_folders_type": "multiple",
+                              "folders": {
+                                    "SAFLoginContext": {
+                                          "wlst_type": "SAFLoginContext",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.SAFLoginContextBean",
+                                          "default_name_value": "${NO_NAME_0:%SAFREMOTECONTEXT%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "LoginURL":          [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "LoginURL",              "wlst_path": "WP001", "default_value": null,   "wlst_type": "string"      } ],
+                                                "PasswordEncrypted": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "PasswordEncrypted",     "wlst_path": "WP001", "default_value": null,   "wlst_type": "password",   "get_method": "GET"} ],
+                                                "Username":          [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Username",              "wlst_path": "WP001", "default_value": null,   "wlst_type": "credential"  } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/SAFRemoteContext${:s}/%SAFREMOTECONTEXT%/SAFLoginContext/%SAFLOGINCONTEXT%"
+                                          }
+                                    }
+                              },
+                              "attributes": {
+                                    "CompressionThreshold":        [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "CompressionThreshold",        "wlst_path": "WP001", "default_value": "${0:2147483647}", "wlst_type": "integer"} ],
+                                    "Notes":                       [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Notes",                       "wlst_path": "WP001", "default_value": null,              "wlst_type": "string" } ],
+                                    "ReplyToSAFRemoteContextName": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ReplyToSAFRemoteContextName", "wlst_path": "WP001", "default_value": null,              "wlst_type": "string" } ]
+                              },
+                              "wlst_attributes_path": "WP001",
+                              "wlst_paths": {
+                                    "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/SAFRemoteContext${:s}/%SAFREMOTECONTEXT%"
+                              }
+                        },
+                        "Template": {
+                              "wlst_type": "Template${:s}",
+                              "online_bean": "weblogic.j2ee.descriptor.wl.TemplateBean",
+                              "child_folders_type": "multiple",
+                              "folders": {
+                                    "DeliveryFailureParams": {
+                                          "wlst_type": "DeliveryFailureParams",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.DeliveryFailureParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%TEMPLATE%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "ErrorDestination":        [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ErrorDestination",        "wlst_path": "WP001", "default_value": null,                "wlst_type": "string", "get_method": "LSA", "set_method": "MBEAN.set_jms_error_destination_mbean",  "set_mbean_type": "weblogic.j2ee.descriptor.wl.DestinationBean"} ],
+                                                "ExpirationLoggingPolicy": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ExpirationLoggingPolicy", "wlst_path": "WP001", "default_value": null,                "wlst_type": "string"  } ],
+                                                "ExpirationPolicy":        [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ExpirationPolicy",        "wlst_path": "WP001", "default_value": "${__NULL__:Discard}", "derived_default": "${:true}", "wlst_type": "string"  } ],
+                                                "RedeliveryLimit":         [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "RedeliveryLimit",         "wlst_path": "WP001", "default_value": -1,                  "derived_default": "${:true}", "wlst_type": "integer" } ],
+                                                "TemplateBean":            [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean",          "wlst_path": "WP001", "default_value": null,                "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Template${:s}/%TEMPLATE%/DeliveryFailureParams/%DELIVERYFAILUREPARAMS%"
+                                          }
+                                    },
+                                    "DeliveryParamsOverrides": {
+                                          "wlst_type": "DeliveryParamsOverrides",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.DeliveryParamsOverridesBean",
+                                          "default_name_value": "${NO_NAME_0:%TEMPLATE%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "DeliveryMode":     [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "DeliveryMode",    "wlst_path": "WP001", "default_value": "${__NULL__:No-Delivery}", "derived_default": "${:true}", "wlst_type": "string"  } ],
+                                                "Priority":         [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Priority",        "wlst_path": "WP001", "default_value": "${0:-1}",               "derived_default": "${:true}", "wlst_type": "integer" } ],
+                                                "RedeliveryDelay":  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "RedeliveryDelay", "wlst_path": "WP001", "default_value": "${0:-1}",               "derived_default": "${:true}", "wlst_type": "long"    } ],
+                                                "TemplateBean":     [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean",  "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string",         "access": "RO" } ],
+                                                "TimeToDeliver":    [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "TimeToDeliver",   "wlst_path": "WP001", "default_value": "${__NULL__:-1}",        "derived_default": "${:true}", "wlst_type": "string"  } ],
+                                                "TimeToLive":       [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "TimeToLive",      "wlst_path": "WP001", "default_value": "${0:-1}",               "derived_default": "${:true}", "wlst_type": "long"    } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Template${:s}/%TEMPLATE%/DeliveryParamsOverrides/%DELIVERYPARAMSOVERRIDES%"
+                                          }
+                                    },
+                                    "GroupParams": {
+                                          "wlst_type": "GroupParams",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.GroupParamsBean",
+                                          "child_folders_type": "multiple",
+                                          "folders": {},
+                                          "attributes": {
+                                                "ErrorDestination":  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ErrorDestination",  "wlst_path": "WP001", "default_value": null,  "wlst_type": "string", "get_method": "LSA", "set_method": "MBEAN.set_jms_error_destination_mbean",  "set_mbean_type": "weblogic.j2ee.descriptor.wl.DestinationBean"} ],
+                                                "SubDeploymentName": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "SubDeploymentName", "wlst_path": "WP001", "default_value": null,  "wlst_type": "string", "restart_required": "true" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Template${:s}/%TEMPLATE%/GroupParams/%FOLDERNAME%"
+                                          }
+                                    },
+                                    "MessageLoggingParams": {
+                                          "wlst_type": "MessageLoggingParams",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.MessageLoggingParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%TEMPLATE%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "MessageLoggingEnabled": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessageLoggingEnabled", "wlst_path": "WP001", "default_value": "false", "derived_default": "${:true}", "wlst_type": "boolean"} ],
+                                                "MessageLoggingFormat":  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessageLoggingFormat",  "wlst_path": "WP001", "default_value": null,    "wlst_type": "string" } ],
+                                                "TemplateBean":          [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean",        "wlst_path": "WP001", "default_value": null,    "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Template${:s}/%TEMPLATE%/MessageLoggingParams/%MESSAGELOGGINGPARAMS%"
+                                          }
+                                    },
+                                    "Multicast": {
+                                          "wlst_type": "Multicast",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.MulticastParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%TEMPLATE%}",
+                                          "folder_params": [
+                                                {"version":  "[10,12.2.1)"},
+                                                {"version":  "[12.2.1,12.2.1.1)", "wlst_mode": "online" },
+                                                {"version":  "[12.2.1.1,)"}
+                                          ],
+                                          "folders": {},
+                                          "attributes": {
+                                                "MulticastAddress":    [ {"version": "[10,)",          "wlst_mode": "both", "wlst_name": "MulticastAddress",    "wlst_path": "WP001", "default_value": null,          "derived_default": "${:true}", "wlst_type": "string",  "get_method": "GET", "restart_required": "true" } ],
+                                                "MulticastPort":       [ {"version": "[10,12.2.1.1)",  "wlst_mode": "both", "wlst_name": "MulticastPort",       "wlst_path": "WP001", "default_value": 6001,          "derived_default": "${:true}", "wlst_type": "integer", "restart_required": "true"} ,
+                                                                         {"version": "[12.2.1.1,)",    "wlst_mode": "both", "wlst_name": "MulticastPort",       "wlst_path": "WP001", "default_value": "${0:6001}",   "derived_default": "${:true}", "wlst_type": "integer", "restart_required": "true"} ],
+                                                "MulticastTimeToLive": [ {"version": "[10,12.2.1.1)",  "wlst_mode": "both", "wlst_name": "MulticastTimeToLive", "wlst_path": "WP001", "default_value": 1,             "derived_default": "${:true}", "wlst_type": "integer", "restart_required": "true"} ,
+                                                                         {"version": "[12.2.1.1,)",    "wlst_mode": "both", "wlst_name": "MulticastTimeToLive", "wlst_path": "WP001", "default_value": "${0:1}",      "derived_default": "${:true}", "wlst_type": "integer", "restart_required": "true"} ],
+                                                "TemplateBean":        [ {"version": "[10,)",          "wlst_mode": "online", "wlst_name": "TemplateBean",      "wlst_path": "WP001", "default_value": null,          "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Template${:s}/%TEMPLATE%/Multicast/%MULTICAST%"
+                                          }
+                                    },
+                                    "Thresholds": {
+                                          "wlst_type": "Thresholds",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.ThresholdParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%TEMPLATE%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "BytesHigh":    [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "BytesHigh",    "wlst_path": "WP001", "default_value": "${0:9223372036854775807}",  "derived_default": "${:true}", "wlst_type": "long"  } ],
+                                                "BytesLow":     [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "BytesLow",     "wlst_path": "WP001", "default_value": "${0:9223372036854775807}",  "derived_default": "${:true}", "wlst_type": "long"  } ],
+                                                "MessagesHigh": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessagesHigh", "wlst_path": "WP001", "default_value": "${0:9223372036854775807}",  "derived_default": "${:true}", "wlst_type": "long"  } ],
+                                                "MessagesLow":  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessagesLow",  "wlst_path": "WP001", "default_value": "${0:9223372036854775807}",  "derived_default": "${:true}", "wlst_type": "long"  } ],
+                                                "TemplateBean": [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean", "wlst_path": "WP001", "default_value": null,                      "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Template${:s}/%TEMPLATE%/Thresholds/%THRESHOLDS%"
+                                          }
+                                    },
+                                    "TopicSubscriptionParams": {
+                                          "wlst_type": "TopicSubscriptionParams",
+                                          "default_name_value": "${NO_NAME_0:%TEMPLATE%}",
+                                          "version": "[12.2.1.3,)",
+                                          "folders": {},
+                                          "attributes": {
+                                                "MessagesLimitOverride":    [ {"version": "[12.2.1.3,)", "wlst_mode": "both", "wlst_name": "MessagesLimitOverride",    "wlst_path": "WP001", "default_value": -1,  "derived_default": "${:true}", "wlst_type": "long"  } ],
+                                                "TemplateBean":             [ {"version": "[12.2.1.3,)", "wlst_mode": "online", "wlst_name": "TemplateBean",           "wlst_path": "WP001", "default_value": null, "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Template${:s}/%TEMPLATE%/TopicSubscriptionParams/%TOPICSUBSCRIPTIONPARAMS%"
+                                          }
+                                    }
+                              },
+                              "attributes": {
+                                    "AttachSender":                   [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "AttachSender",                   "wlst_path": "WP001", "default_value": "supports",         "wlst_type": "string",           "get_method": "LSA"} ],
+                                    "ConsumptionPausedAtStartup":     [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "ConsumptionPausedAtStartup",     "wlst_path": "WP001", "default_value": "false",            "wlst_type": "boolean",          "restart_required": "true"} ],
+                                    "DefaultUnitOfOrder":             [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "DefaultUnitOfOrder",             "wlst_path": "WP001", "default_value": "false",            "wlst_type": "boolean"           } ],
+                                    "DestinationKey":                 [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "DestinationKey${:s}",            "wlst_path": "WP001", "default_value": null,               "wlst_type": "${list:jarray}",   "wlst_read_type": "delimited_string[semicolon]", "get_method": "${LSA:GET}", "restart_required": "true" } ],
+                                    "IncompleteWorkExpirationTime":   [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "IncompleteWorkExpirationTime",   "wlst_path": "WP001", "default_value": "${0:-1}",          "wlst_type": "integer"           } ],
+                                    "InsertionPausedAtStartup":       [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "InsertionPausedAtStartup",       "wlst_path": "WP001", "default_value": "false",            "wlst_type": "boolean",          "restart_required": "true" } ],
+                                    "MaximumMessageSize":             [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "MaximumMessageSize",             "wlst_path": "WP001", "default_value": "${0:2147483647}",  "wlst_type": "integer"           } ],
+                                    "MessagingPerformancePreference": [ {"version": "[10,12.2.1.1)", "wlst_mode": "both", "wlst_name": "MessagingPerformancePreference", "wlst_path": "WP001", "default_value": "${50:25}",         "wlst_type": "integer"           } ,
+                                                                        {"version": "[12.2.1.1,)",   "wlst_mode": "both", "wlst_name": "MessagingPerformancePreference", "wlst_path": "WP001", "default_value": 25,                 "wlst_type": "integer"           } ],
+                                    "Notes":                          [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "Notes",                          "wlst_path": "WP001", "default_value": null,               "wlst_type": "string"            } ],
+                                    "ProductionPausedAtStartup":      [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "ProductionPausedAtStartup",      "wlst_path": "WP001", "default_value": "false",            "wlst_type": "boolean",          "restart_required": "true" } ],
+                                    "Quota":                          [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "Quota",                          "wlst_path": "WP001", "default_value": null,               "wlst_type": "string",           "get_method": "LSA", "set_method": "MBEAN.set_jms_quota_mbean", "set_mbean_type": "weblogic.j2ee.descriptor.wl.QuotaBean"} ],
+                                    "SafExportPolicy":                [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "SafExportPolicy",                "wlst_path": "WP001", "default_value": "All",              "wlst_type": "string",           "get_method": "LSA", "restart_required": "true" } ],
+                                    "UnitOfWorkHandlingPolicy":       [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "UnitOfWorkHandlingPolicy",       "wlst_path": "WP001", "default_value": "PassThrough",      "wlst_type": "string",           "get_method": "LSA"} ]
+                              },
+                              "wlst_attributes_path": "WP001",
+                              "wlst_paths": {
+                                    "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Template${:s}/%TEMPLATE%"
+                              }
+                        },
+                        "Topic": {
+                              "wlst_type": "Topic${:s}",
+                              "online_bean": "weblogic.j2ee.descriptor.wl.TopicBean",
+                              "child_folders_type": "multiple",
+                              "folders": {
+                                    "DeliveryFailureParams": {
+                                          "wlst_type": "DeliveryFailureParams",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.DeliveryFailureParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%TOPIC%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "ErrorDestination":        [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ErrorDestination",        "wlst_path": "WP001", "default_value": null,                "wlst_type": "string", "get_method": "LSA", "set_method": "MBEAN.set_jms_error_destination_mbean", "set_mbean_type": "weblogic.j2ee.descriptor.wl.DestinationBean"} ],
+                                                "ExpirationLoggingPolicy": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ExpirationLoggingPolicy", "wlst_path": "WP001", "default_value": null,                "wlst_type": "string"  } ],
+                                                "ExpirationPolicy":        [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ExpirationPolicy",        "wlst_path": "WP001", "default_value": "${__NULL__:Discard}",   "derived_default": "${:true}", "wlst_type": "string"  } ],
+                                                "RedeliveryLimit":         [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "RedeliveryLimit",         "wlst_path": "WP001", "default_value": -1,                  "derived_default": "${:true}", "wlst_type": "integer" } ],
+                                                "TemplateBean":            [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean",          "wlst_path": "WP001", "default_value": null,                "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Topic${:s}/%TOPIC%/DeliveryFailureParams/%DELIVERYFAILUREPARAMS%"
+                                          }
+                                    },
+                                    "DeliveryParamsOverrides": {
+                                          "wlst_type": "DeliveryParamsOverrides",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.DeliveryParamsOverridesBean",
+                                          "default_name_value": "${NO_NAME_0:%TOPIC%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "DeliveryMode":    [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "DeliveryMode",    "wlst_path": "WP001", "default_value": "${__NULL__:No-Delivery}",   "derived_default": "${:true}", "wlst_type": "string"  } ],
+                                                "Priority":        [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Priority",        "wlst_path": "WP001", "default_value": "${0:-1}",               "derived_default": "${:true}", "wlst_type": "integer" } ],
+                                                "RedeliveryDelay": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "RedeliveryDelay", "wlst_path": "WP001", "default_value": "${0:-1}",               "derived_default": "${:true}", "wlst_type": "long"    } ],
+                                                "TemplateBean":    [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean",  "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string",         "access": "RO" } ],
+                                                "TimeToDeliver":   [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "TimeToDeliver",   "wlst_path": "WP001", "default_value": "${__NULL__:-1}",        "derived_default": "${:true}", "wlst_type": "string"  } ],
+                                                "TimeToLive":      [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "TimeToLive",      "wlst_path": "WP001", "default_value": "${0:-1}",               "derived_default": "${:true}", "wlst_type": "long"    } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Topic${:s}/%TOPIC%/DeliveryParamsOverrides/%DELIVERYPARAMSOVERRIDES%"
+                                          }
+                                    },
+                                    "MessageLoggingParams": {
+                                          "wlst_type": "MessageLoggingParams",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.MessageLoggingParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%TOPIC%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "MessageLoggingEnabled": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessageLoggingEnabled", "wlst_path": "WP001", "default_value": "false", "derived_default": "${:true}", "wlst_type": "boolean" } ],
+                                                "MessageLoggingFormat":  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessageLoggingFormat",  "wlst_path": "WP001", "default_value": null,    "wlst_type": "string"  } ],
+                                                "TemplateBean":          [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean",        "wlst_path": "WP001", "default_value": null,    "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Topic${:s}/%TOPIC%/MessageLoggingParams/%MESSAGELOGGINGPARAMS%"
+                                          }
+                                    },
+                                    "Multicast": {
+                                          "wlst_type": "Multicast",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.MulticastParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%TOPIC%}",
+                                          "folder_params": [
+                                                {"version":  "[10,12.2.1)"},
+                                                {"version":  "[12.2.1,12.2.1.1)", "wlst_mode": "online" },
+                                                {"version":  "[12.2.1.1,)"}
+                                          ],
+                                          "folders": {},
+                                          "attributes": {
+                                                "MulticastAddress":    [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "MulticastAddress",    "wlst_path": "WP001", "default_value": null,          "derived_default": "${:true}", "wlst_type": "string",  "get_method": "GET", "restart_required": "true"  } ],
+                                                "MulticastPort":       [ {"version": "[10,12.2.1.1)", "wlst_mode": "both", "wlst_name": "MulticastPort",       "wlst_path": "WP001", "default_value": 6001,          "derived_default": "${:true}", "wlst_type": "integer", "restart_required": "true"} ,
+                                                                         {"version": "[12.2.1.1,)",   "wlst_mode": "both", "wlst_name": "MulticastPort",       "wlst_path": "WP001", "default_value": "${0:6001}",   "derived_default": "${:true}", "wlst_type": "integer", "restart_required": "true"} ],
+                                                "MulticastTimeToLive": [ {"version": "[10,12.2.1.1)", "wlst_mode": "both", "wlst_name": "MulticastTimeToLive", "wlst_path": "WP001", "default_value": 1,             "derived_default": "${:true}", "wlst_type": "integer", "restart_required": "true"} ,
+                                                                         {"version": "[12.2.1.1,)",   "wlst_mode": "both", "wlst_name": "MulticastTimeToLive", "wlst_path": "WP001", "default_value": "${0:1}",      "derived_default": "${:true}", "wlst_type": "integer", "restart_required": "true"} ],
+                                                "TemplateBean":        [ {"version": "[10,)",         "wlst_mode": "online", "wlst_name": "TemplateBean",      "wlst_path": "WP001", "default_value": null,          "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Topic${:s}/%TOPIC%/Multicast/%MULTICAST%"
+                                          }
+                                    },
+                                    "Thresholds": {
+                                          "wlst_type": "Thresholds",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.ThresholdParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%TOPIC%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "BytesHigh":     [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "BytesHigh",    "wlst_path": "WP001", "default_value": "${0:9223372036854775807}", "derived_default": "${:true}", "wlst_type": "long"} ],
+                                                "BytesLow":      [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "BytesLow",     "wlst_path": "WP001", "default_value": "${0:9223372036854775807}", "derived_default": "${:true}", "wlst_type": "long"} ],
+                                                "MessagesHigh":  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessagesHigh", "wlst_path": "WP001", "default_value": "${0:9223372036854775807}", "derived_default": "${:true}", "wlst_type": "long"} ],
+                                                "MessagesLow":   [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessagesLow",  "wlst_path": "WP001", "default_value": "${0:9223372036854775807}", "derived_default": "${:true}", "wlst_type": "long"} ],
+                                                "TemplateBean":  [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean", "wlst_path": "WP001", "default_value": null,                     "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Topic${:s}/%TOPIC%/Thresholds/%THRESHOLDS%"
+                                          }
+                                    },
+                                    "TopicSubscriptionParams": {
+                                          "wlst_type": "TopicSubscriptionParams",
+                                          "default_name_value": "${NO_NAME_0:%TOPIC%}",
+                                          "version": "[12.2.1.3,)",
+                                          "folders": {},
+                                          "attributes": {
+                                                "MessagesLimitOverride":    [ {"version": "[12.2.1.3,)", "wlst_mode": "both", "wlst_name": "MessagesLimitOverride",    "wlst_path": "WP001", "default_value": -1,  "derived_default": "${:true}", "wlst_type": "long"  } ],
+                                                "TemplateBean":             [ {"version": "[12.2.1.3,)", "wlst_mode": "online", "wlst_name": "TemplateBean",           "wlst_path": "WP001", "default_value": null, "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Topic${:s}/%TOPIC%/TopicSubscriptionParams/%TOPICSUBSCRIPTIONPARAMS%"
+                                          }
+                                    }
+                              },
+                              "attributes": {
+                                    "AttachSender":                   [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "AttachSender",                          "wlst_path": "WP001", "default_value": "supports",              "derived_default": "${:true}", "wlst_type": "string",           "get_method": "LSA"} ],
+                                    "ConsumptionPausedAtStartup":     [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "ConsumptionPausedAtStartup",            "wlst_path": "WP001", "default_value": "false",                 "derived_default": "${:true}", "wlst_type": "boolean",          "restart_required": "true" } ],
+                                    "DefaultTargetingEnabled":        [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "DefaultTargetingEnabled",               "wlst_path": "WP001", "default_value": null,                    "wlst_type": "boolean",          "restart_required": "true" } ],
+                                    "DefaultUnitOfOrder":             [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "DefaultUnitOfOrder",                    "wlst_path": "WP001", "default_value": "false",                 "wlst_type": "boolean"           } ],
+                                    "DestinationKey":                 [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "DestinationKey${:s}",                   "wlst_path": "WP001", "default_value": null,                    "derived_default": "${:true}", "wlst_type": "${list:jarray}",   "wlst_read_type": "delimited_string[semicolon]", "get_method": "${LSA:GET}", "restart_required": "true" } ],
+                                    "ForwardingPolicy":               [ {"version": "[12.2.1.2,)",   "wlst_mode": "both", "wlst_name": "ForwardingPolicy",                      "wlst_path": "WP001", "default_value": "Replicated",            "wlst_type": "string",           "restart_required": "true" } ],
+                                    "IncompleteWorkExpirationTime":   [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "IncompleteWorkExpirationTime",          "wlst_path": "WP001", "default_value": "${0:-1}",               "wlst_type": "integer"           } ],
+                                    "InsertionPausedAtStartup":       [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "InsertionPausedAtStartup",              "wlst_path": "WP001", "default_value": "false",                 "derived_default": "${:true}", "wlst_type": "boolean",          "restart_required": "true" } ],
+                                    "JNDIName":                       [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "JNDIName",                              "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string"            } ],
+                                    "JmsCreateDestinationIdentifier": [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "${Jms:JMS}CreateDestinationIdentifier", "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string",           "get_method": "LSA", "restart_required": "true"} ],
+                                    "LoadBalancingPolicy":            [ {"version": "[12.2.1.2,)",   "wlst_mode": "both", "wlst_name": "LoadBalancingPolicy",                   "wlst_path": "WP001", "default_value": "${__NULL__:Round-Robin}",   "wlst_type": "string"            } ],
+                                    "LocalJNDIName":                  [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "LocalJNDIName",                         "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string"            } ],
+                                    "MaximumMessageSize":             [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "MaximumMessageSize",                    "wlst_path": "WP001", "default_value": "${0:2147483647}",       "derived_default": "${:true}", "wlst_type": "integer"           } ],
+                                    "MessagingPerformancePreference": [ {"version": "[10,12.2.1.1)", "wlst_mode": "both", "wlst_name": "MessagingPerformancePreference",        "wlst_path": "WP001", "default_value": "${50:25}",              "derived_default": "${:true}", "wlst_type": "integer"           } ,
+                                                                        {"version": "[12.2.1.1,)",   "wlst_mode": "both", "wlst_name": "MessagingPerformancePreference",        "wlst_path": "WP001", "default_value": 25,                      "derived_default": "${:true}", "wlst_type": "integer"           } ],
+                                    "Notes":                          [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "Notes",                                 "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string"            } ],
+                                    "ProductionPausedAtStartup":      [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "ProductionPausedAtStartup",             "wlst_path": "WP001", "default_value": "false",                 "derived_default": "${:true}", "wlst_type": "boolean",          "restart_required": "true" } ],
+                                    "Quota":                          [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "Quota",                                 "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string",           "get_method": "LSA", "set_method": "MBEAN.set_jms_quota_mbean",    "set_mbean_type": "weblogic.j2ee.descriptor.wl.QuotaBean"} ],
+                                    "SafExportPolicy":                [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "${Saf:SAF}ExportPolicy",                "wlst_path": "WP001", "default_value": "All",                   "derived_default": "${:true}", "wlst_type": "string",           "get_method": "LSA", "restart_required": "true"} ],
+                                    "SubDeploymentName":              [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "SubDeploymentName",                     "wlst_path": "WP001", "default_value": null, "derived_default": "${:true}", "wlst_type": "string",   "get_method": "LSA", "restart_required": "true"} ],
+                                    "Template":                       [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "Template",                              "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string",           "get_method": "LSA", "set_method": "MBEAN.set_jms_template_mbean", "set_mbean_type": "weblogic.j2ee.descriptor.wl.TemplateBean", "restart_required": "true"} ],
+                                    "UnitOfOrderRouting":             [ {"version": "[12.2.1.2,)",   "wlst_mode": "both", "wlst_name": "UnitOfOrderRouting",                    "wlst_path": "WP001", "default_value": "${__NULL__:Hash}",      "wlst_type": "string",           "restart_required": "true" } ],
+                                    "UnitOfWorkHandlingPolicy":       [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "UnitOfWorkHandlingPolicy",              "wlst_path": "WP001", "default_value": "PassThrough",           "derived_default": "${:true}", "wlst_type": "string",           "get_method": "LSA"} ]
+                              },
+                              "wlst_attributes_path": "WP001",
+                              "wlst_paths": {
+                                    "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/Topic${:s}/%TOPIC%"
+                              }
+                        },
+                        "UniformDistributedQueue": {
+                              "wlst_type": "UniformDistributedQueue${:s}",
+                              "online_bean": "weblogic.j2ee.descriptor.wl.UniformDistributedQueueBean",
+                              "child_folders_type": "multiple",
+                              "folders": {
+                                    "DeliveryFailureParams": {
+                                          "wlst_type": "DeliveryFailureParams",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.DeliveryFailureParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%UNIFORMDISTRIBUTEDQUEUE%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "ErrorDestination":        [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ErrorDestination",        "wlst_path": "WP001", "default_value": null,                "wlst_type": "string", "get_method": "${LSA:GET}", "set_method": "MBEAN.set_jms_error_destination_mbean", "set_mbean_type": "weblogic.j2ee.descriptor.wl.DestinationBean"} ],
+                                                "ExpirationLoggingPolicy": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ExpirationLoggingPolicy", "wlst_path": "WP001", "default_value": null,                "wlst_type": "string"  } ],
+                                                "ExpirationPolicy":        [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ExpirationPolicy",        "wlst_path": "WP001", "default_value": "${__NULL__:Discard}",   "derived_default": "${:true}", "wlst_type": "string"  } ],
+                                                "RedeliveryLimit":         [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "RedeliveryLimit",         "wlst_path": "WP001", "default_value": -1,                  "derived_default": "${:true}", "wlst_type": "integer" } ],
+                                                "TemplateBean":            [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean",          "wlst_path": "WP001", "default_value": null,                "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/UniformDistributedQueue${:s}/%UNIFORMDISTRIBUTEDQUEUE%/DeliveryFailureParams/%DELIVERYFAILUREPARAMS%"
+                                          }
+                                    },
+                                    "DeliveryParamsOverrides": {
+                                          "wlst_type": "DeliveryParamsOverrides",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.DeliveryParamsOverridesBean",
+                                          "default_name_value": "${NO_NAME_0:%UNIFORMDISTRIBUTEDQUEUE%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "DeliveryMode":    [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "DeliveryMode",    "wlst_path": "WP001", "default_value": "${__NULL__:No-Delivery}",   "derived_default": "${:true}", "wlst_type": "string" } ],
+                                                "Priority":        [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Priority",        "wlst_path": "WP001", "default_value": "${0:-1}",               "derived_default": "${:true}", "wlst_type": "integer"} ],
+                                                "RedeliveryDelay": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "RedeliveryDelay", "wlst_path": "WP001", "default_value": "${0:-1}",               "derived_default": "${:true}", "wlst_type": "long"   } ],
+                                                "TemplateBean":    [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean",  "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string",         "access": "RO" } ],
+                                                 "TimeToDeliver":   [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "TimeToDeliver",   "wlst_path": "WP001", "default_value": "${__NULL__:-1}",        "derived_default": "${:true}", "wlst_type": "string" } ],
+                                                "TimeToLive":      [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "TimeToLive",      "wlst_path": "WP001", "default_value": "${0:-1}",               "derived_default": "${:true}", "wlst_type": "long"   } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/UniformDistributedQueue${:s}/%UNIFORMDISTRIBUTEDQUEUE%/DeliveryParamsOverrides/%DELIVERYPARAMSOVERRIDES%"
+                                          }
+                                    },
+                                    "MessageLoggingParams": {
+                                          "wlst_type": "MessageLoggingParams",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.MessageLoggingParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%UNIFORMDISTRIBUTEDQUEUE%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "MessageLoggingEnabled": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessageLoggingEnabled", "wlst_path": "WP001", "default_value": "false", "derived_default": "${:true}", "wlst_type": "boolean"} ],
+                                                "MessageLoggingFormat":  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessageLoggingFormat",  "wlst_path": "WP001", "default_value": null,    "wlst_type": "string" } ],
+                                                "TemplateBean":          [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean",        "wlst_path": "WP001", "default_value": null,    "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/UniformDistributedQueue${:s}/%UNIFORMDISTRIBUTEDQUEUE%/MessageLoggingParams/%MESSAGELOGGINGPARAMS%"
+                                          }
+                                    },
+                                    "Thresholds": {
+                                          "wlst_type": "Thresholds",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.ThresholdParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%UNIFORMDISTRIBUTEDQUEUE%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "BytesHigh":    [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "BytesHigh",    "wlst_path": "WP001", "default_value": "${0:9223372036854775807}", "derived_default": "${:true}", "wlst_type": "long"   } ],
+                                                "BytesLow":     [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "BytesLow",     "wlst_path": "WP001", "default_value": "${0:9223372036854775807}", "derived_default": "${:true}", "wlst_type": "long"   } ],
+                                                "MessagesHigh": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessagesHigh", "wlst_path": "WP001", "default_value": "${0:9223372036854775807}", "derived_default": "${:true}", "wlst_type": "long"   } ],
+                                                "MessagesLow":  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessagesLow",  "wlst_path": "WP001", "default_value": "${0:9223372036854775807}", "derived_default": "${:true}", "wlst_type": "long"   } ],
+                                                "TemplateBean": [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean", "wlst_path": "WP001", "default_value": null,                     "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/UniformDistributedQueue${:s}/%UNIFORMDISTRIBUTEDQUEUE%/Thresholds/%THRESHOLDS%"
+                                          }
+                                    }
+                              },
+                              "attributes": {
+                                    "AttachSender":                   [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "AttachSender",                          "wlst_path": "WP001", "default_value": "supports",                "derived_default": "${:true}", "wlst_type": "string",           "get_method": "LSA"} ],
+                                    "ConsumptionPausedAtStartup":     [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "ConsumptionPausedAtStartup",            "wlst_path": "WP001", "default_value": "false",                   "derived_default": "${:true}", "wlst_type": "boolean",          "restart_required": "true"  } ],
+                                    "DefaultTargetingEnabled":        [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "DefaultTargetingEnabled",               "wlst_path": "WP001", "default_value": null,                      "wlst_type": "boolean",          "restart_required": "true"  } ],
+                                    "DefaultUnitOfOrder":             [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "DefaultUnitOfOrder",                    "wlst_path": "WP001", "default_value": "false",                   "wlst_type": "boolean"           } ],
+                                    "DestinationKey":                 [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "DestinationKey${:s}",                   "wlst_path": "WP001", "default_value": null,                      "derived_default": "${:true}", "wlst_type": "${list:jarray}",   "wlst_read_type": "delimited_string[semicolon]", "get_method": "${LSA:GET}", "restart_required": "true" } ],
+                                    "ForwardDelay":                   [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "ForwardDelay",                          "wlst_path": "WP001", "default_value": "${0:-1}",                 "wlst_type": "integer"           } ],
+                                    "IncompleteWorkExpirationTime":   [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "IncompleteWorkExpirationTime",          "wlst_path": "WP001", "default_value": "${0:-1}",                 "wlst_type": "integer"           } ],
+                                    "InsertionPausedAtStartup":       [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "InsertionPausedAtStartup",              "wlst_path": "WP001", "default_value": "false",                   "derived_default": "${:true}", "wlst_type": "boolean",          "restart_required": "true" } ],
+                                    "JNDIName":                       [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "JNDIName",                              "wlst_path": "WP001", "default_value": null,                      "wlst_type": "string"            } ],
+                                    "JmsCreateDestinationIdentifier": [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "${Jms:JMS}CreateDestinationIdentifier", "wlst_path": "WP001", "default_value": null,                      "wlst_type": "string",           "get_method": "LSA", "restart_required": "true"} ],
+                                    "LoadBalancingPolicy":            [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "LoadBalancingPolicy",                   "wlst_path": "WP001", "default_value": "${__NULL__:Round-Robin}", "wlst_type": "string"            } ],
+                                    "LocalJNDIName":                  [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "LocalJNDIName",                         "wlst_path": "WP001", "default_value": null,                      "wlst_type": "string"            } ],
+                                    "MaximumMessageSize":             [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "MaximumMessageSize",                    "wlst_path": "WP001", "default_value": "${0:2147483647}",         "derived_default": "${:true}", "wlst_type": "integer"           } ],
+                                    "MessagingPerformancePreference": [ {"version": "[10,12.2.1.1)", "wlst_mode": "both", "wlst_name": "MessagingPerformancePreference",        "wlst_path": "WP001", "default_value": "${50:25}",                "derived_default": "${:true}", "wlst_type": "integer"           } ,
+                                                                        {"version": "[12.2.1.1,)",   "wlst_mode": "both", "wlst_name": "MessagingPerformancePreference",        "wlst_path": "WP001", "default_value": 25,                        "derived_default": "${:true}", "wlst_type": "integer"           } ],
+                                    "Notes":                          [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "Notes",                                 "wlst_path": "WP001", "default_value": null,                      "wlst_type": "string"            } ],
+                                    "ProductionPausedAtStartup":      [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "ProductionPausedAtStartup",             "wlst_path": "WP001", "default_value": "false",                   "derived_default": "${:true}", "wlst_type": "boolean",          "restart_required": "true" } ],
+                                    "Quota":                          [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "Quota",                                 "wlst_path": "WP001", "default_value": null,                      "wlst_type": "string",           "get_method": "LSA", "set_method": "MBEAN.set_jms_quota_mbean",    "set_mbean_type": "weblogic.j2ee.descriptor.wl.QuotaBean"    } ],
+                                    "ResetDeliveryCountOnForward":    [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "ResetDeliveryCountOnForward",           "wlst_path": "WP001", "default_value": "true",                    "wlst_type": "boolean"           } ],
+                                    "SafExportPolicy":                [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "${Saf:SAF}ExportPolicy",                "wlst_path": "WP001", "default_value": "All",                     "derived_default": "${:true}", "wlst_type": "string",           "get_method": "LSA", "restart_required": "true"} ],
+                                    "SubDeploymentName":              [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "SubDeploymentName",                     "wlst_path": "WP001", "default_value": null, "derived_default": "${:true}", "wlst_type": "string",           "get_method": "LSA", "restart_required": "true"} ],
+                                    "Template":                       [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "Template",                              "wlst_path": "WP001", "default_value": null,                      "wlst_type": "string",           "get_method": "LSA", "set_method": "MBEAN.set_jms_template_mbean", "set_mbean_type": "weblogic.j2ee.descriptor.wl.TemplateBean", "restart_required": "true" } ],
+                                    "UnitOfOrderRouting":             [ {"version": "[10,12.2.1.2)", "wlst_mode": "both", "wlst_name": "UnitOfOrderRouting",                    "wlst_path": "WP001", "default_value": "Hash",                    "wlst_type": "string",           "get_method": "LSA", "restart_required": "true"} ,
+                                                                        {"version": "[12.2.1.2,)",   "wlst_mode": "both", "wlst_name": "UnitOfOrderRouting",                    "wlst_path": "WP001", "default_value": "${__NULL__:Hash}",        "wlst_type": "string",           "get_method": "LSA", "restart_required": "true"} ],
+                                    "UnitOfWorkHandlingPolicy":       [ {"version": "[10,)",         "wlst_mode": "both", "wlst_name": "UnitOfWorkHandlingPolicy",              "wlst_path": "WP001", "default_value": "PassThrough",             "derived_default": "${:true}", "wlst_type": "string",           "get_method": "LSA"} ]
+                              },
+                              "wlst_attributes_path": "WP001",
+                              "wlst_paths": {
+                                    "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/UniformDistributedQueue${:s}/%UNIFORMDISTRIBUTEDQUEUE%"
+                              }
+                        },
+                        "UniformDistributedTopic": {
+                              "wlst_type": "UniformDistributedTopic${:s}",
+                              "online_bean": "weblogic.j2ee.descriptor.wl.UniformDistributedTopicBean",
+                              "child_folders_type": "multiple",
+                              "folders": {
+                                    "DeliveryFailureParams": {
+                                          "wlst_type": "DeliveryFailureParams",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.DeliveryFailureParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%UNIFORMDISTRIBUTEDTOPIC%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "ErrorDestination":        [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ErrorDestination",        "wlst_path": "WP001", "default_value": null,                "wlst_type": "string", "get_method": "LSA", "set_method": "MBEAN.set_jms_error_destination_mbean", "set_mbean_type": "weblogic.j2ee.descriptor.wl.DestinationBean"} ],
+                                                "ExpirationLoggingPolicy": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ExpirationLoggingPolicy", "wlst_path": "WP001", "default_value": null,                "wlst_type": "string"  } ],
+                                                "ExpirationPolicy":        [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "ExpirationPolicy",        "wlst_path": "WP001", "default_value": "${__NULL__:Discard}",   "derived_default": "${:true}", "wlst_type": "string"  } ],
+                                                "RedeliveryLimit":         [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "RedeliveryLimit",         "wlst_path": "WP001", "default_value": -1,                  "derived_default": "${:true}", "wlst_type": "integer" } ],
+                                                "TemplateBean":            [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean",          "wlst_path": "WP001", "default_value": null,                "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/UniformDistributedTopic${:s}/%UNIFORMDISTRIBUTEDTOPIC%/DeliveryFailureParams/%DELIVERYFAILUREPARAMS%"
+                                          }
+                                    },
+                                    "DeliveryParamsOverrides": {
+                                          "wlst_type": "DeliveryParamsOverrides",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.DeliveryParamsOverridesBean",
+                                          "default_name_value": "${NO_NAME_0:%UNIFORMDISTRIBUTEDTOPIC%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "DeliveryMode":    [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "DeliveryMode",    "wlst_path": "WP001", "default_value": "${__NULL__:No-Delivery}",  "derived_default": "${:true}", "wlst_type": "string" } ],
+                                                "Priority":        [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Priority",        "wlst_path": "WP001", "default_value": "${0:-1}",              "derived_default": "${:true}", "wlst_type": "integer"} ],
+                                                "RedeliveryDelay": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "RedeliveryDelay", "wlst_path": "WP001", "default_value": "${0:-1}",              "derived_default": "${:true}", "wlst_type": "long"   } ],
+                                                "TemplateBean":    [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean",  "wlst_path": "WP001", "default_value": null,                   "wlst_type": "string",         "access": "RO" } ],
+                                                "TimeToDeliver":   [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "TimeToDeliver",   "wlst_path": "WP001", "default_value": "${__NULL__:-1}",       "derived_default": "${:true}", "wlst_type": "string" } ],
+                                                "TimeToLive":      [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "TimeToLive",      "wlst_path": "WP001", "default_value": "${0:-1}",              "derived_default": "${:true}", "wlst_type": "long"   } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/UniformDistributedTopic${:s}/%UNIFORMDISTRIBUTEDTOPIC%/DeliveryParamsOverrides/%DELIVERYPARAMSOVERRIDES%"
+                                          }
+                                    },
+                                    "MessageLoggingParams": {
+                                          "wlst_type": "MessageLoggingParams",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.MessageLoggingParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%UNIFORMDISTRIBUTEDTOPIC%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "MessageLoggingEnabled": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessageLoggingEnabled", "wlst_path": "WP001", "default_value": "false", "derived_default": "${:true}", "wlst_type": "boolean"} ],
+                                                "MessageLoggingFormat":  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessageLoggingFormat",  "wlst_path": "WP001", "default_value": null,    "wlst_type": "string" } ],
+                                                "TemplateBean":          [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean",        "wlst_path": "WP001", "default_value": null,    "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/UniformDistributedTopic${:s}/%UNIFORMDISTRIBUTEDTOPIC%/MessageLoggingParams/%MESSAGELOGGINGPARAMS%"
+                                          }
+                                    },
+                                    "Multicast": {
+                                          "wlst_type": "Multicast",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.MulticastParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%UNIFORMDISTRIBUTEDTOPIC%}",
+                                          "folder_params": [
+                                                {"version":  "[10,12.2.1)"},
+                                                {"version":  "[12.2.1,12.2.1.1)", "wlst_mode": "online" },
+                                                {"version":  "[12.2.1.1,)"}
+                                          ],
+                                          "folders": {},
+                                          "attributes": {
+                                                "MulticastAddress":    [ {"version": "[10,)",            "wlst_mode": "both", "wlst_name": "MulticastAddress",    "wlst_path": "WP001", "default_value": null,            "derived_default": "${:true}", "wlst_type": "string",       "get_method": "GET", "restart_required": "true" } ],
+                                                "MulticastPort":       [ {"version": "[10,12.2.1.1)",    "wlst_mode": "both", "wlst_name": "MulticastPort",       "wlst_path": "WP001", "default_value": 6001,            "derived_default": "${:true}", "wlst_type": "integer",      "restart_required": "true" } ,
+                                                                         {"version": "[12.2.1.1,)",      "wlst_mode": "both", "wlst_name": "MulticastPort",       "wlst_path": "WP001", "default_value": "${0:6001}",     "derived_default": "${:true}", "wlst_type": "integer",      "restart_required": "true" } ],
+                                                "MulticastTimeToLive": [ {"version": "[10,12.2.1.1)",    "wlst_mode": "both", "wlst_name": "MulticastTimeToLive", "wlst_path": "WP001", "default_value": 1,               "derived_default": "${:true}", "wlst_type": "integer",      "restart_required": "true" } ,
+                                                                         {"version": "[12.2.1.1,)",      "wlst_mode": "both", "wlst_name": "MulticastTimeToLive", "wlst_path": "WP001", "default_value": "${0:1}",        "derived_default": "${:true}", "wlst_type": "integer",      "restart_required": "true" } ],
+                                                "TemplateBean":        [ {"version": "[10,)",            "wlst_mode": "online", "wlst_name": "TemplateBean",      "wlst_path": "WP001", "default_value": null,            "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/UniformDistributedTopic${:s}/%UNIFORMDISTRIBUTEDTOPIC%/Multicast/%MULTICAST%"
+                                          }
+                                    },
+                                    "Thresholds": {
+                                          "wlst_type": "Thresholds",
+                                          "online_bean": "weblogic.j2ee.descriptor.wl.ThresholdParamsBean",
+                                          "default_name_value": "${NO_NAME_0:%UNIFORMDISTRIBUTEDTOPIC%}",
+                                          "folders": {},
+                                          "attributes": {
+                                                "BytesHigh":    [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "BytesHigh",    "wlst_path": "WP001", "default_value": "${0:9223372036854775807}", "derived_default": "${:true}", "wlst_type": "long" } ],
+                                                "BytesLow":     [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "BytesLow",     "wlst_path": "WP001", "default_value": "${0:9223372036854775807}", "derived_default": "${:true}", "wlst_type": "long" } ],
+                                                "MessagesHigh": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessagesHigh", "wlst_path": "WP001", "default_value": "${0:9223372036854775807}", "derived_default": "${:true}", "wlst_type": "long" } ],
+                                                "MessagesLow":  [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "MessagesLow",  "wlst_path": "WP001", "default_value": "${0:9223372036854775807}", "derived_default": "${:true}", "wlst_type": "long" } ],
+                                                "TemplateBean": [ {"version": "[10,)", "wlst_mode": "online", "wlst_name": "TemplateBean", "wlst_path": "WP001", "default_value": null,                     "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/UniformDistributedTopic${:s}/%UNIFORMDISTRIBUTEDTOPIC%/Thresholds/%THRESHOLDS%"
+                                          }
+                                    },
+                                    "TopicSubscriptionParams": {
+                                          "wlst_type": "TopicSubscriptionParams",
+                                          "default_name_value": "${NO_NAME_0:%UNIFORMDISTRIBUTEDTOPIC%}",
+                                          "version": "[12.2.1.3,)",
+                                          "folders": {},
+                                          "attributes": {
+                                                "MessagesLimitOverride":    [ {"version": "[12.2.1.3,)", "wlst_mode": "both", "wlst_name": "MessagesLimitOverride",    "wlst_path": "WP001", "default_value": -1,  "derived_default": "${:true}", "wlst_type": "long"  } ],
+                                                "TemplateBean":             [ {"version": "[12.2.1.3,)", "wlst_mode": "online", "wlst_name": "TemplateBean",           "wlst_path": "WP001", "default_value": null, "wlst_type": "string", "access": "RO" } ]
+                                          },
+                                          "wlst_attributes_path": "WP001",
+                                          "wlst_paths": {
+                                                "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/UniformDistributedTopic${:s}/%UNIFORMDISTRIBUTEDTOPIC%/TopicSubscriptionParams/%TOPICSUBSCRIPTIONPARAMS%"
+                                          }
+                                    }
+                              },
+                              "attributes": {
+                                    "AttachSender":                   [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "AttachSender",                          "wlst_path": "WP001", "default_value": "supports",              "derived_default": "${:true}", "wlst_type": "string",           "get_method": "LSA"  } ],
+                                    "ConsumptionPausedAtStartup":     [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "ConsumptionPausedAtStartup",            "wlst_path": "WP001", "default_value": "false",                 "derived_default": "${:true}", "wlst_type": "boolean",          "restart_required": "true" } ],
+                                    "DefaultTargetingEnabled":        [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "DefaultTargetingEnabled",               "wlst_path": "WP001", "default_value": null,                    "wlst_type": "boolean",          "restart_required": "true" } ],
+                                    "DefaultUnitOfOrder":             [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "DefaultUnitOfOrder",                    "wlst_path": "WP001", "default_value": "false",                 "wlst_type": "boolean"           } ],
+                                    "DestinationKey":                 [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "DestinationKey${:s}",                   "wlst_path": "WP001", "default_value": null,                    "derived_default": "${:true}", "wlst_type": "${list:jarray}",   "wlst_read_type": "delimited_string[semicolon]", "get_method": "${LSA:GET}", "restart_required": "true" } ],
+                                    "ForwardingPolicy":               [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "ForwardingPolicy",                      "wlst_path": "WP001", "default_value": "Replicated",            "wlst_type": "string",           "get_method": "LSA", "restart_required": "true"  } ],
+                                    "IncompleteWorkExpirationTime":   [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "IncompleteWorkExpirationTime",          "wlst_path": "WP001", "default_value": "${0:-1}",               "wlst_type": "integer"           } ],
+                                    "InsertionPausedAtStartup":       [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "InsertionPausedAtStartup",              "wlst_path": "WP001", "default_value": "false",                 "derived_default": "${:true}", "wlst_type": "boolean",          "restart_required": "true" } ],
+                                    "JNDIName":                       [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "JNDIName",                              "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string"            } ],
+                                    "JmsCreateDestinationIdentifier": [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "${Jms:JMS}CreateDestinationIdentifier", "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string",           "get_method": "LSA", "restart_required": "true"  } ],
+                                    "LoadBalancingPolicy":            [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "LoadBalancingPolicy",                   "wlst_path": "WP001", "default_value": "${__NULL__:Round-Robin}",   "wlst_type": "string"            } ],
+                                    "LocalJNDIName":                  [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "LocalJNDIName",                         "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string"            } ],
+                                    "MaximumMessageSize":             [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "MaximumMessageSize",                    "wlst_path": "WP001", "default_value": "${0:2147483647}",       "derived_default": "${:true}", "wlst_type": "integer"           } ],
+                                    "MessagingPerformancePreference": [ {"version": "[10,12.2.1.1)",   "wlst_mode": "both", "wlst_name": "MessagingPerformancePreference",        "wlst_path": "WP001", "default_value": "${50:25}",              "derived_default": "${:true}", "wlst_type": "integer"           } ,
+                                                                        {"version": "[12.2.1.1,)",     "wlst_mode": "both", "wlst_name": "MessagingPerformancePreference",        "wlst_path": "WP001", "default_value": 25,                      "derived_default": "${:true}", "wlst_type": "integer"           } ],
+                                    "Notes":                          [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "Notes",                                 "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string"            } ],
+                                    "ProductionPausedAtStartup":      [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "ProductionPausedAtStartup",             "wlst_path": "WP001", "default_value": "false",                 "derived_default": "${:true}", "wlst_type": "boolean",          "restart_required": "true" } ],
+                                    "Quota":                          [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "Quota",                                 "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string",           "get_method": "LSA", "set_method": "MBEAN.set_jms_quota_mbean",    "set_mbean_type": "weblogic.j2ee.descriptor.wl.QuotaBean"    } ],
+                                    "SafExportPolicy":                [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "${Saf:SAF}ExportPolicy",                "wlst_path": "WP001", "default_value": "All",                   "derived_default": "${:true}", "wlst_type": "string",           "get_method": "LSA", "restart_required": "true" } ],
+                                    "SubDeploymentName":              [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "SubDeploymentName",                     "wlst_path": "WP001", "default_value": null, "derived_default": "${:true}", "wlst_type": "string",   "get_method": "LSA", "restart_required": "true" } ],
+                                    "Template":                       [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "Template",                              "wlst_path": "WP001", "default_value": null,                    "wlst_type": "string",           "get_method": "LSA", "set_method": "MBEAN.set_jms_template_mbean", "set_mbean_type": "weblogic.j2ee.descriptor.wl.TemplateBean", "restart_required": "true" } ],
+                                    "UnitOfOrderRouting":             [ {"version": "[10,12.2.1.2)",   "wlst_mode": "both", "wlst_name": "UnitOfOrderRouting",                    "wlst_path": "WP001", "default_value": "Hash",                  "wlst_type": "string",           "get_method": "LSA", "restart_required": "true"  } ,
+                                                                        {"version": "[12.2.1.2,)",     "wlst_mode": "both", "wlst_name": "UnitOfOrderRouting",                    "wlst_path": "WP001", "default_value": "${__NULL__:Hash}",      "wlst_type": "string",           "get_method": "LSA", "restart_required": "true"  } ],
+                                    "UnitOfWorkHandlingPolicy":       [ {"version": "[10,)",           "wlst_mode": "both", "wlst_name": "UnitOfWorkHandlingPolicy",              "wlst_path": "WP001", "default_value": "PassThrough",           "derived_default": "${:true}", "wlst_type": "string",           "get_method": "LSA"  } ]
+                              },
+                              "wlst_attributes_path": "WP001",
+                              "wlst_paths": {
+                                    "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%/UniformDistributedTopic${:s}/%UNIFORMDISTRIBUTEDTOPIC%"
+                              }
+                        }
+                  },
+                  "attributes": {
+                        "Notes":   [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Notes",   "wlst_path": "WP001", "default_value": null,     "wlst_type": "string"   } ],
+                        "Version": [ {"version": "[10,)", "wlst_mode": "both", "wlst_name": "Version", "wlst_path": "WP001", "default_value": "${0:1}", "wlst_type": "integer", "restart_required": "true"} ]
+                  },
+                  "wlst_attributes_path": "WP001",
+                  "wlst_paths": {
+                        "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/${Jms:JMS}Resource/%JMSRESOURCE%"
+                  }
+            },
+            "SubDeployment": {
+                  "wlst_type": "SubDeployment${:s}",
+                  "online_bean": "weblogic.management.configuration.SubDeploymentMBean",
+                  "child_folders_type": "multiple",
+                  "folders": {},
+                  "attributes": {
+                        "CompatibilityName":  [ {"version": "[10,)",        "wlst_mode": "both",    "wlst_name": "CompatibilityName", "wlst_path": "WP001", "default_value": null,    "wlst_type": "string"           } ],
+                        "ModuleType":         [ {"version": "[10,)",        "wlst_mode": "both",    "wlst_name": "ModuleType",        "wlst_path": "WP001", "default_value": null,    "wlst_type": "string"           } ],
+                        "Notes":              [ {"version": "[10,)",        "wlst_mode": "both",    "wlst_name": "Notes",             "wlst_path": "WP001", "default_value": null,    "wlst_type": "string"           } ],
+                        "Target":             [ {"version": "[10,)",        "wlst_mode": "offline", "wlst_name": "Target",            "wlst_path": "WP001", "default_value": null,    "wlst_type": "delimited_string", "set_method": "MBEAN.set_target_jms_mbeans" },
+                              {"version": "[10,)",        "wlst_mode": "online",  "wlst_name": "Targets",           "wlst_path": "WP002", "default_value": null,    "wlst_type": "jarray",          "get_method": "GET", "preferred_model_type": "delimited_string", "set_method": "MBEAN.set_target_jms_mbeans", "set_mbean_type": "weblogic.management.configuration.TargetMBean"} ],
+                        "Untargeted":         [ {"version": "[12.2.1,)",    "wlst_mode": "both",    "wlst_name": "Untargeted",        "wlst_path": "WP001", "default_value": "false", "wlst_type": "boolean"          } ]
+                  },
+                  "wlst_attributes_path": "WP001",
+                  "wlst_paths": {
+                        "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/SubDeployment${:s}/%SUBDEPLOYMENT%",
+                        "WP002": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/SubDeployment${:s}/%SUBDEPLOYMENT%/Targets"
+                  }
+            }
+      },
+      "attributes": {
+            "CompatibilityName":       [ {"version": "[10,)", "wlst_mode": "both",    "wlst_name": "CompatibilityName",       "wlst_path": "WP001", "default_value": null,   "wlst_type": "string"           } ],
+            "DeploymentOrder":         [ {"version": "[10,)", "wlst_mode": "both",    "wlst_name": "DeploymentOrder",         "wlst_path": "WP001", "default_value": 100,    "wlst_type": "integer"          } ],
+            "DeploymentPrincipalName": [ {"version": "[10,)", "wlst_mode": "both",    "wlst_name": "DeploymentPrincipalName", "wlst_path": "WP001", "default_value": null,   "wlst_type": "string"           } ],
+            "DescriptorFileName":      [ {"version": "[10,)", "wlst_mode": "both",    "wlst_name": "DescriptorFileName",      "wlst_path": "WP001", "default_value": null,   "wlst_type": "string",          "access": "${:RO}"} ],
+            "ModuleType":              [ {"version": "[10,)", "wlst_mode": "both",    "wlst_name": "ModuleType",              "wlst_path": "WP001", "default_value": null,   "wlst_type": "string"           } ],
+            "Notes":                   [ {"version": "[10,)", "wlst_mode": "both",    "wlst_name": "Notes",                   "wlst_path": "WP001", "default_value": null,   "wlst_type": "string"           } ],
+            "PartitionName":           [ {"version": "[12.2.1,)", "wlst_mode": "online", "wlst_name": "PartitionName",        "wlst_path": "WP001", "default_value": null,   "wlst_type": "string",          "get_method": "GET", "access": "RO" } ],
+            "SourcePath":              [ {"version": "[10,)", "wlst_mode": "both",    "wlst_name": "SourcePath",              "wlst_path": "WP001", "default_value": null, "derived_default": "${:true}", "wlst_type": "string", "uses_path_tokens": "true" } ],
+            "Target":                  [ {"version": "[10,)", "wlst_mode": "offline", "wlst_name": "Target",                  "wlst_path": "WP001", "default_value": null,   "wlst_type": "delimited_string", "set_method": "MBEAN.set_target_mbeans" },
+                                         {"version": "[10,)", "wlst_mode": "online",  "wlst_name": "Targets",                 "wlst_path": "WP002", "default_value": null,   "wlst_type": "jarray",          "get_method": "GET", "preferred_model_type": "delimited_string", "set_method": "MBEAN.set_target_mbeans", "set_mbean_type": "weblogic.management.configuration.TargetMBean"} ]
+      },
+      "wlst_attributes_path": "WP001",
+      "wlst_paths": {
+            "WP001": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%",
+            "WP002": "/JMSSystemResource${:s}/%JMSSYSTEMRESOURCE%/Targets"
+      }
+}
